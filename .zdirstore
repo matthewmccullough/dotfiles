@@ -5,4 +5,5 @@ if [ -d ~/Documents/Teach/Courses/Developer\ Productivity\ Power-Ups\ for\ Mac/p
 if [ -d ~/Documents/Temp/Scratch ]; then pushd -q ~/Documents/Temp/Scratch; fi
 if [ -d ~/Documents/Temp/Downloads ]; then pushd -q ~/Documents/Temp/Downloads; fi
 if [ -d ~/Documents/Temp/Process ]; then pushd -q ~/Documents/Temp/Process; fi
+if [ -d ~/.shellsconfig ]; then pushd -q ~/.shellsconfig; fi
 if [ -d ~ ]; then pushd -q ~; fi
