@@ -1,0 +1,8 @@
+if [ -d ~/.Trash ]; then pushd -q ~/.Trash; fi
+if [ -d ~/Documents/Teach/Courses ]; then pushd -q ~/Documents/Teach/Courses; fi
+if [ -d ~/Documents/Teach/Courses/Developer\ Productivity\ Power-Ups\ for\ Mac ]; then pushd -q ~/Documents/Teach/Courses/Developer\ Productivity\ Power-Ups\ for\ Mac; fi
+if [ -d ~/Documents/Teach/Courses/Developer\ Productivity\ Power-Ups\ for\ Mac/presentation ]; then pushd -q ~/Documents/Teach/Courses/Developer\ Productivity\ Power-Ups\ for\ Mac/presentation; fi
+if [ -d ~/Documents/Temp/Scratch ]; then pushd -q ~/Documents/Temp/Scratch; fi
+if [ -d ~/Documents/Temp/Downloads ]; then pushd -q ~/Documents/Temp/Downloads; fi
+if [ -d ~/Documents/Temp/Process ]; then pushd -q ~/Documents/Temp/Process; fi
+if [ -d ~ ]; then pushd -q ~; fi

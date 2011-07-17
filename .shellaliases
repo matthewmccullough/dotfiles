@@ -1,0 +1,85 @@
+# Connectivity
+alias ssh.bluehost='ssh presenu3@box683.bluehost.com'
+alias ssh.github='ssh git@github.com'
+# Commands to run apps
+alias run.jetty='cd /Applications/Dev/jetty-6.1.9;java -jar start.jar etc/jetty.xml'
+alias run.jmeter='${JMETER_HOME}/bin/jperf.sh'
+alias run.nexus='nexus start'
+alias run.clojure.repl='java -cp ${CLOJURE_HOME}/clojure.jar clojure.lang.Repl'
+alias run.jlineclojure.repl='java -cp ${CLOJURE_HOME}/jline-0.9.91.jar:${CLOJURE_HOME}/clojure.jar jline.ConsoleRunner clojure.lang.Repl'
+alias run.clojure.script='java -cp ${CLOJURE_HOME}/clojure.jar clojure.main'
+
+# Commands to change dirs
+alias to.gradlecode='cd ~/Documents/Code/Code_and_Docs/Gradle'
+alias to.temp='cd ${MYTEMP}'
+alias to.downloads='cd ${MYDOWNLOADS}'
+alias to.process='cd ${MYPROCESS}'
+alias to.docs='cd ${MYDOCUMENTS}'
+alias to.clients='cd ~/Documents/Clients'
+alias to.code='cd ${MYCODE}'
+alias to.code.code='cd ${MYCODE}/Code_and_Docs'
+alias to.code.opensource='cd ${MYCODE}/Code_and_Docs'
+alias to.dosug='cd ~/Documents/Clients/DOSUG'
+alias to.scratch='cd ${MYSCRATCH}'
+alias to.teach='cd ${MYTEACH}'
+alias to.ppap='cd ~/Documents/Clients/Presentation-Patterns-Book/presentation-patterns_git'
+alias to.gradle='cd ~/Documents/Clients/Gradleware'
+alias to.gradlebooks='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos'
+alias to.gradlebook1='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-1'
+alias to.gradlebook2='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-2'
+alias to.gradlebook3='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-3'
+alias to.gradleexamples='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-examples'
+alias to.gradlesamples='cd ~/Documents/Code/Code_and_Docs/Gradle/gradle_core_git/subprojects/docs/src/samples'
+
+alias to.courses='cd ${MYCOURSES}'
+alias to.courses.maven2='cd ${MYCOURSES}/Mastering-Maven-2.0/examples'
+alias to.courses.maven3='cd ${MYCOURSES}/Mastering-Maven-3.0/examples_git'
+
+alias to.courses.git='cd ~/Documents/Teach/Courses/Git/repos'
+alias to.courses.gitexamples='cd ${MYCOURSES}/Git/repos/local_repo_examples'
+
+alias to.courses.debugjava='cd ${MYCOURSES}/Open-Source-Debugging-JavaTools/examples_git'
+alias to.courses.hadoop='cd ${MYCOURSES}/Hadoop/hadoop-examples_git'
+alias to.courses.encryption='cd ${MYCOURSES}/Encryption-Boot-Camp/encryption-examples_git'
+alias to.courses.gradle='cd ~/Documents/Teach/Courses/Gradle-Fundamentals'
+alias to.courses.sonar='cd ~/Documents/Teach/Courses/Sonar'
+
+alias to.practice='cd ~/Documents/Code/Practice'
+alias to.reference='cd ~/Documents/Code/Reference'
+alias to.devapps='cd ${MYDEVAPPS}'
+
+alias aq=aquamacs
+alias dnsflush='dscacheutil -flushcache'
+
+alias g=git
+
+alias pbcopynn='tr -d "\n" | pbcopy'
+
+alias aj=autojump
+
+alias qltext='xattr -wx com.apple.FinderInfo "54 45 58 54 21 52 63 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $1'
+#alias qltext2='osascript -e tell application "Finder" to set file type of ((POSIX file "$1") as alias) to "TEXT"'
+
+alias gsgp='git scribe gen pdf && open output/book.pdf'
+alias gsgh='git scribe gen html && open output/book.html'
+
+# Often useful to prefix with SUDO to see more system level network usage
+alias network.connections='lsof -l -i +L -R -V'
+alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
+
+# Files used, anywhere on the filesystem
+alias files.usage='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep'
+# Files being opened
+alias files.open='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep open'
+# Files in use in the Users directory
+alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep Users'
+
+# LS_COLORS='no=01;37:fi=01;37:di=07;96:ln=01;36:pi=01;32:so=01;35:do=01;35:bd=01;33:cd=01;33:ex=01;31:mi=00;05;37:or=00;05;37:'
+# -G Add colors to ls
+# -l Long format
+# -h Short size suffixes (B, K, M, G, P)
+# -p Postpend slash to folders
+alias ls='ls -G -h -p '
+alias ll='ls -l -G -h -p '
+
+function gitnr() { mkdir $1; cd $1; git init; touch README; git add README; git commit -mFirst-commit;}
