@@ -1,0 +1,15 @@
+.DS_Store
+*~
+.#*
+.gradle_targets
+.gradle
+.gradletasknamecache
+.netrc
+.boom
+.autojump_py
+.boom.conf
+.cloudapp
+.emacs.desktop
+.zdirstore
+.ido.last
+.viminfo

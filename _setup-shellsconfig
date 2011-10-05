@@ -1,0 +1,54 @@
+#!/bin/zsh
+
+echo "Setting up..."
+
+# Must be run from the shell config dir
+export SHELLCONFIGDIR=$PWD
+echo "SHELLCONFIGDIR = $SHELLCONFIGDIR"
+
+pushd ~
+
+function symlinkifne {
+    echo "WORKING ON: $1"
+    
+    # does it exist
+    if [[ -a $1 ]]; then
+      echo "  WARNING: $1 already exists. Skipping."
+    else
+      # if not, create it
+      echo "  Symlinking $SHELLCONFIGDIR/$1 to $1"
+      ln -s $SHELLCONFIGDIR/$1 $1
+    fi
+}
+
+symlinkifne .autojump_py
+# symlinkifne .bash_gitprompt
+symlinkifne .bash_history
+symlinkifne .bash_profile
+symlinkifne .bashrc
+symlinkifne .boom
+symlinkifne .conf
+symlinkifne .cloudapp
+symlinkifne .emacs_desktop
+symlinkifne .gemrc
+symlinkifne .gitconfig
+symlinkifne .gitignore
+symlinkifne .netrc
+symlinkifne .profile
+symlinkifne .rvmrc
+symlinkifne .shellaliases
+symlinkifne .shellpaths
+symlinkifne .shellvars
+symlinkifne .viminfo
+symlinkifne .vimrc
+symlinkifne .zcompdump
+symlinkifne .zdirstore
+symlinkifne .zlogout
+symlinkifne .zprofile
+symlinkifne .zsh
+symlinkifne .zsh-update
+symlinkifne .zsh_history
+symlinkifne .zshenv
+symlinkifne .zshrc
+
+popd

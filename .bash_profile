@@ -14,7 +14,6 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 shopt -s cmdhist
 
 
-source ~/.bash_gitprompt
+source ~/.shellsconfig/.bash_gitprompt
 #source ~/scripts/git-completion.sh
-source /usr/local/Cellar/git/1.7.5.2/etc/bash_completion.d/git-completion.bash
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source /usr/local/Cellar/git/1.7.6/etc/bash_completion.d/git-completion.bash

@@ -40,7 +40,8 @@ alias to.courses.gitexamples='cd ${MYCOURSES}/Git/repos/local_repo_examples'
 
 alias to.courses.debugjava='cd ${MYCOURSES}/Open-Source-Debugging-JavaTools/examples_git'
 alias to.courses.hadoop='cd ${MYCOURSES}/Hadoop/hadoop-examples_git'
-alias to.courses.encryption='cd ${MYCOURSES}/Encryption-Boot-Camp/encryption-examples_git'
+alias to.courses.encryption='cd ${MYCOURSES}/Cryptography/Cryptography-Boot-Camp/encryption-examples_git'
+alias to.courses.cryptography='cd ${MYCOURSES}/Cryptography/Cryptography-Boot-Camp/encryption-examples_git'
 alias to.courses.gradle='cd ~/Documents/Teach/Courses/Gradle-Fundamentals'
 alias to.courses.sonar='cd ~/Documents/Teach/Courses/Sonar'
 

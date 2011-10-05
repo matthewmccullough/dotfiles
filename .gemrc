@@ -1,0 +1,12 @@
+--- 
+:verbose: true
+:benchmark: false
+:update_sources: true
+:backtrace: false
+update: --env-shebang
+:bulk_threshold: 1000
+install: --env-shebang
+:sources: 
+- http://gems.rubyforge.org/
+- http://gems.datamapper.org
+- http://gems.datamapper.org

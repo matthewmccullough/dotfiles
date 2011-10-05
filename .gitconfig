@@ -1,0 +1,129 @@
+[user]
+	name = Matthew McCullough
+	email = matthewm@ambientideas.com
+
+[color]
+# ui = true is a superset of all the more specific color options
+#  as documented at http://book.git-scm.com/5_customizing_git.html
+# When set to always, always use colors in all git commands which are capable of colored output.
+# When false, never. When set to true or auto, use colors only when the output is to the terminal.
+# When more specific variables of color.* are set, they always take precedence over this setting.
+# Defaults to false.
+	ui = auto
+    # diff = auto
+    # status = auto
+    # branch = auto
+
+[gui]
+	fontdiff = -family Monaco -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+
+[core]
+	excludesfile = ~/.gitignore
+	quotepath = false
+	autocrlf = input
+	safecrlf = warn
+	editor = mate -w
+
+[alias]
+	br = branch -a
+	s = status -u
+	cl = log --stat -C -2
+	c = commit
+	co = checkout
+	d = diff --color-words
+	dh = diff HEAD
+	dc = diff --staged
+	dw = diff --word-diff
+	dcw = diff --color-words
+	dm = !git diff | mate
+	dv = !git diff | vim
+	who = shortlog -s --
+	ph = push
+	pl = pull
+	lp = log -p
+	lod = log --oneline --decorate
+	lg = log --graph
+	lpo = log --pretty=oneline --abbrev-commit --graph --decorate --all
+	spull = !git-svn fetch && git-svn rebase
+	spush = !git-svn dcommit
+	sync = !git pull && git push
+	es = !git pull --rebase && git push
+	lf = log --pretty=fuller
+	ignorechanges = update-index --assume-unchanged
+	noticechanges = update-index --no-assume-unchanged
+	gcap = gc --aggressive --prune
+	listconf = config --global --list
+	cam = commit -a -m
+	lsm = log -M --stat
+	hse = log --stat -5
+	diffall = diff HEAD
+	logr = log -M
+	logr2 = log --stat -M -2
+	logit = log --stat -M
+	scrub = !git reset --hard && git clean -fd
+	pub = !git pub checkout master && git pull && git checkout dev && git rebase master && git checkout master && git merge dev && git wtf
+	cs = status
+	rv = remote -v
+	lwr = log --stat -C
+	pur = pull --rebase
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+	orphank = !gitk --all `git reflog | cut -c1-7`&
+	orphanl = !git --pretty=oneline --abbrev-commit --graph --decorate `git reflog | cut -c1-7`
+	k = !exec gitk --all&
+	testecho1 = !sh -c 'echo with slash: zero=$0 one=$1 two=$2' -
+	# te1 RESULT: with slash: zero=- one=A two=B
+	testecho2 = !sh -c 'echo without slash: zero=$0 one=$1 two=$2'
+	# te2 RESULT: without slash: zero=A one=B two=C
+	st = status
+	l = log --stat -C
+	ll = log --stat -C -3
+	servehere = daemon --export-all --base-path=. --enable=receive-pack
+    purgeme = !git clean -fd && git reset --hard
+    prunenow = gc --prune=now
+    fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+    squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+    ri = rebase --interactive --autosquash
+    ccfq = !sh -c 'git add $1 && git commit -m\"Placeholder\"' -
+	lol = log --pretty=oneline --abbrev-commit
+	sealog = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	logmsp = log --graph --all --decorate --pretty=oneline --abbrev-commit
+	blg = log --graph --decorate --all --abbrev-commit --pretty=oneline
+
+
+# Other alias ideas
+#testnewrepodoesntwork1 = !echo git init $1 && echo cd $1
+#testnewrepodoesntwork2 = !sh -c 'git init $1; echo hi' -
+#testnewrepodoesntwork3 = "!f() { git init $1}; f"
+#testbashgitinit = "!bash -c 'git init $0'"
+#testecho = !echo cd $1
+#testbashfunction = "!function gitme() { git init $1; echo now cd to $1; }; gitme"
+
+
+[apply]
+	whitespace = nowarn
+[rerere]
+	enabled = 1
+
+[diff]
+	tool = araxis
+[difftool]
+	prompt = false
+#[difftool "myaraxis"]
+    # cmd = araxisgitdiff ONE $LOCAL THREE FOUR $REMOTE
+
+[merge]
+	tool = araxis
+[mergetool]
+	prompt = false
+	keepBackup = false
+#[mergetool "myaraxis"]
+    # cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
+
+[branch]
+    # Automatically set up pull to be --rebase
+    # autosetuprebase = always
+
+[github]
+    # https://github.com/blog/180-local-github-config
+    user = matthewmccullough
+    token = d3cc4fff44b19e5e2027d719d66d8657

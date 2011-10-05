@@ -6,6 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 export ZSH_THEME="gozilla"
+#export ZSH_THEME="random"
 
 # Set to this to use case-sensitive completion
 export CASE_SENSITIVE="true"
