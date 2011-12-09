@@ -84,3 +84,6 @@ alias ls='ls -G -h -p '
 alias ll='ls -l -G -h -p '
 
 function gitnr() { mkdir $1; cd $1; git init; touch README; git add README; git commit -mFirst-commit;}
+
+# Program commands
+alias apacherestart="sudo /usr/sbin/apachectl restart"
