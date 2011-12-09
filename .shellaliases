@@ -44,6 +44,7 @@ alias to.courses.encryption='cd ${MYCOURSES}/Cryptography/Cryptography-Boot-Camp
 alias to.courses.cryptography='cd ${MYCOURSES}/Cryptography/Cryptography-Boot-Camp/encryption-examples_git'
 alias to.courses.gradle='cd ~/Documents/Teach/Courses/Gradle-Fundamentals'
 alias to.courses.sonar='cd ~/Documents/Teach/Courses/Sonar'
+alias to.courses.jenkins='cd ~/Documents/Teach/Courses/Jenkins-CI'
 
 alias to.practice='cd ~/Documents/Code/Practice'
 alias to.reference='cd ~/Documents/Code/Reference'
@@ -57,6 +58,9 @@ alias g=git
 alias pbcopynn='tr -d "\n" | pbcopy'
 
 alias aj=autojump
+
+alias battery=battery
+
 
 alias qltext='xattr -wx com.apple.FinderInfo "54 45 58 54 21 52 63 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $1'
 #alias qltext2='osascript -e tell application "Finder" to set file type of ((POSIX file "$1") as alias) to "TEXT"'

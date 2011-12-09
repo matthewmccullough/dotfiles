@@ -16,6 +16,7 @@
 
 [gui]
 	fontdiff = -family Monaco -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	recentrepo = /Users/mccm06/Documents/Temp/Scratch/tracfone/hgw1
 
 [core]
 	excludesfile = ~/.gitignore
@@ -26,7 +27,7 @@
 
 [alias]
 	br = branch -a
-	s = status -u
+	s = status -s -u
 	cl = log --stat -C -2
 	c = commit
 	co = checkout
@@ -44,6 +45,8 @@
 	lod = log --oneline --decorate
 	lg = log --graph
 	lpo = log --pretty=oneline --abbrev-commit --graph --decorate --all
+	l1 = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	l2 = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	spull = !git-svn fetch && git-svn rebase
 	spush = !git-svn dcommit
 	sync = !git pull && git push
@@ -78,17 +81,19 @@
 	l = log --stat -C
 	ll = log --stat -C -3
 	servehere = daemon --export-all --base-path=. --enable=receive-pack
-    purgeme = !git clean -fd && git reset --hard
-    prunenow = gc --prune=now
-    fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-    squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-    ri = rebase --interactive --autosquash
-    ccfq = !sh -c 'git add $1 && git commit -m\"Placeholder\"' -
+        purgeme = !git clean -fd && git reset --hard
+        prunenow = gc --prune=now
+        fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+        squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+        ri = rebase --interactive --autosquash
+        ccfq = !sh -c 'git add $1 && git commit -m\"Placeholder\"' -
 	lol = log --pretty=oneline --abbrev-commit
 	sealog = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	logmsp = log --graph --all --decorate --pretty=oneline --abbrev-commit
 	blg = log --graph --decorate --all --abbrev-commit --pretty=oneline
-
+        lgso = log --graph --date=short --pretty=format:'%C(yellow)%h%Creset %cn%x09%cd %s%C(green bold)%d'
+        ro = !git fetch origin && git reset --hard origin/master
+        shorten = "!sh -c 'curl -i http://git.io -F url=$1' -"
 
 # Other alias ideas
 #testnewrepodoesntwork1 = !echo git init $1 && echo cd $1
@@ -109,7 +114,7 @@
 [difftool]
 	prompt = false
 #[difftool "myaraxis"]
-    # cmd = araxisgitdiff ONE $LOCAL THREE FOUR $REMOTE
+        # cmd = araxisgitdiff ONE $LOCAL THREE FOUR $REMOTE
 
 [merge]
 	tool = araxis
@@ -117,13 +122,14 @@
 	prompt = false
 	keepBackup = false
 #[mergetool "myaraxis"]
-    # cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
+        # cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
 
 [branch]
-    # Automatically set up pull to be --rebase
-    # autosetuprebase = always
+        # Automatically set up pull to be --rebase
+        # autosetuprebase = always
 
 [github]
-    # https://github.com/blog/180-local-github-config
-    user = matthewmccullough
-    token = d3cc4fff44b19e5e2027d719d66d8657
+        # https://github.com/blog/180-local-github-config
+        user = matthewmccullough
+        token = d3cc4fff44b19e5e2027d719d66d8657
+
