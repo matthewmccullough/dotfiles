@@ -1,0 +1,14 @@
+# What is this?
+These are Matthew McCullough's shell configuration dotfiles. The primary goal is to increase CLI productivity on Mac OSX, though many scripts run just fine on any POSIX implementation.
+
+# Focus
+The focus is on Zshell support, but there are plenty of cross-platform scripts in here. There are a few bash-specific ones.
+
+# Contributions
+Contributions are always welcome in the form of pull requests with explanatory comments.
+
+# Loathing, Mehs and Praise
+1. Loathing should be directed into pull requests that make it better.
+2. Bugs with the setup should be put as GitHub issues.
+3. Mehs should be directed to /dev/null
+4. Praise should be directed to [@matthewmccull](http://twitter.com/matthewmccull) on Twitter
