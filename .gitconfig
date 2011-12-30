@@ -80,20 +80,22 @@
 	st = status
 	l = log --stat -C
 	ll = log --stat -C -3
-	servehere = daemon --export-all --base-path=. --enable=receive-pack
-        purgeme = !git clean -fd && git reset --hard
-        prunenow = gc --prune=now
-        fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-        squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-        ri = rebase --interactive --autosquash
-        ccfq = !sh -c 'git add $1 && git commit -m\"Placeholder\"' -
+	servehere = daemon --verbose --informative-errors --reuseaddr --export-all --base-path=. --enable=receive-pack
+    purgeme = !git clean -fd && git reset --hard
+    prunenow = gc --prune=now
+    fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+    squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+    ri = rebase --interactive --autosquash
+    ccfq = !sh -c 'git add $1 && git commit -m\"Placeholder\"' -
 	lol = log --pretty=oneline --abbrev-commit
 	sealog = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	logmsp = log --graph --all --decorate --pretty=oneline --abbrev-commit
 	blg = log --graph --decorate --all --abbrev-commit --pretty=oneline
-        lgso = log --graph --date=short --pretty=format:'%C(yellow)%h%Creset %cn%x09%cd %s%C(green bold)%d'
-        ro = !git fetch origin && git reset --hard origin/master
-        shorten = "!sh -c 'curl -i http://git.io -F url=$1' -"
+    lgso = log --graph --date=short --pretty=format:'%C(yellow)%h%Creset %cn%x09%cd %s%C(green bold)%d'
+    ro = !git fetch origin && git reset --hard origin/master
+    shorten = "!sh -c 'curl -i http://git.io -F url=$1' -"
+	pushnotes = !sh -c 'git push $1 refs/notes/*' -
+	fetchnotes = !sh -c 'git fetch $1 refs/notes/*:refs/notes/*' -
 
 # Other alias ideas
 #testnewrepodoesntwork1 = !echo git init $1 && echo cd $1
@@ -114,7 +116,7 @@
 [difftool]
 	prompt = false
 #[difftool "myaraxis"]
-        # cmd = araxisgitdiff ONE $LOCAL THREE FOUR $REMOTE
+    # cmd = araxisgitdiff ONE $LOCAL THREE FOUR $REMOTE
 
 [merge]
 	tool = araxis
@@ -122,14 +124,34 @@
 	prompt = false
 	keepBackup = false
 #[mergetool "myaraxis"]
-        # cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
+    # cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
 
 [branch]
-        # Automatically set up pull to be --rebase
-        # autosetuprebase = always
+    # Automatically set up pull to be --rebase
+    # autosetuprebase = always
 
 [github]
-        # https://github.com/blog/180-local-github-config
-        user = matthewmccullough
-        token = d3cc4fff44b19e5e2027d719d66d8657
+    # https://github.com/blog/180-local-github-config
+    user = matthewmccullough
+    token = d3cc4fff44b19e5e2027d719d66d8657
 
+[url "git://github.com/"]
+	insteadOf = "ghg://"
+	pushInsteadOf = "ghg://"
+	# Example: git clone ghg://ntschutta/emacs
+[url "git://github.com/matthewmccullough/"]
+    insteadOf = "ghgm://"
+    pushInsteadOf = "ghgm://"
+    # Example: git clone ghgm://hellogitworld
+[url "git@github.com:"]
+	insteadOf = "ghs://"
+	pushInsteadOf = "ghs://"
+[url "git@github.com:matthewmccullough/"]
+    insteadOf = "ghsm://"
+    pushInsteadOf = "ghsm://"
+[url "https://github.com/"]
+	insteadOf = "ghh://"
+	pushInsteadOf = "ghh://"
+[url "https://github.com/matthewmccullough/"]
+    insteadOf = "ghhm://"
+    pushInsteadOf = "ghhm://"
