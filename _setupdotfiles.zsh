@@ -45,9 +45,9 @@ symlinkifne .bash_history
 symlinkifne .bash_profile
 symlinkifne .bashrc
 symlinkifne .boom
+symlinkifne .boom.conf
 symlinkifne .cloudapp
 symlinkifne .conf
-symlinkifne .emacs_desktop
 symlinkifne .gemrc
 symlinkifne .gitconfig
 symlinkifne .gitignore
