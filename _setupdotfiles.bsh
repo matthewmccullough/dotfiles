@@ -18,7 +18,6 @@ pushd ~
 .rvmrc
 .shellaliases
 .shellpaths
-.shellsconfig
 .shellvars
 .vimrc
 .zdirstore
@@ -45,7 +44,6 @@ pushd ~
 .rvmrc
 .shellaliases
 .shellpaths
-.shellsconfig
 .shellvars
 .vimrc
 .zdirstore

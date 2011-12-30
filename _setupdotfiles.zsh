@@ -1,16 +1,32 @@
 #!/bin/zsh
 
+export UNLINK=true
+
 function symlinkifne {
     echo "WORKING ON: $1"
     
     # does it exist
     if [[ -a $1 ]]; then
-      echo "  WARNING: $1 already exists. Skipping."
+      echo "  WARNING: $1 already exists."
+      
+      # If Unlink is requested
+      if [ "$UNLINK" = "true" ]; then
+          unlink $1
+          echo "  Unlinking $1"
+          
+          # create the link
+          export DOTLESS=`echo $1 | sed s/.//`
+          echo "  Symlinking $DOTFILESDIRRELATIVETOHOME/$DOTLESS to $1"
+          ln -s $DOTFILESDIRRELATIVETOHOME/$DOTLESS $1
+      else
+        echo "  SKIPPING $1."  
+      fi
+    # does not exist
     else
-      # if not, create it
+      # create the link
       export DOTLESS=`echo $1 | sed s/.//`
-      echo "  Symlinking $DOTFILESDIR/$DOTLESS to $1"
-      ln -s $DOTFILESDIR/$DOTLESS $1
+      echo "  Symlinking $DOTFILESDIRRELATIVETOHOME/$DOTLESS to $1"
+      ln -s $DOTFILESDIRRELATIVETOHOME/$DOTLESS $1
     fi
 }
 
@@ -18,8 +34,9 @@ function symlinkifne {
 echo "This script must be run from the dotfiles directory"
 echo "Setting up..."
 
-export DOTFILESDIR=$PWD
-echo "DOTFILESDIR = $DOTFILESDIR"
+#export DOTFILESDIRRELATIVETOHOME=$PWD
+export DOTFILESDIRRELATIVETOHOME=.dotfiles
+echo "DOTFILESDIRRELATIVETOHOME = $DOTFILESDIRRELATIVETOHOME"
 
 pushd ~
 
@@ -46,10 +63,14 @@ symlinkifne .zcompdump
 symlinkifne .zdirstore
 symlinkifne .zlogout
 symlinkifne .zprofile
-symlinkifne .zsh
+#symlinkifne .zsh
 symlinkifne .zsh-update
 symlinkifne .zsh_history
 symlinkifne .zshenv
 symlinkifne .zshrc
 
 popd
+
+# Ignore changes to these two files since they are local history
+git update-index --assume-unchanged zsh_history
+git update-index --assume-unchanged zdirstore
