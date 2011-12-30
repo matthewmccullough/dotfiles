@@ -1,6 +1,6 @@
 #Matthew's Scripts
 export PATH=$PATH:./
-export PATH=$PATH:~/.shellsconfig/scripts
+export PATH=$PATH:~/.dotfiles/scripts
 
 #Brew
 export PATH=/usr/local/sbin:$PATH
