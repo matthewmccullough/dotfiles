@@ -40,8 +40,6 @@ echo "DOTFILESDIRRELATIVETOHOME = $DOTFILESDIRRELATIVETOHOME"
 
 pushd ~
 
-symlinkifne .autojump_py
-symlinkifne .bash_history
 symlinkifne .bash_profile
 symlinkifne .bashrc
 symlinkifne .boom
@@ -57,15 +55,11 @@ symlinkifne .rvmrc
 symlinkifne .shellaliases
 symlinkifne .shellpaths
 symlinkifne .shellvars
-symlinkifne .viminfo
 symlinkifne .vimrc
 symlinkifne .zcompdump
-symlinkifne .zdirstore
 symlinkifne .zlogout
 symlinkifne .zprofile
 #symlinkifne .zsh
-symlinkifne .zsh-update
-symlinkifne .zsh_history
 symlinkifne .zshenv
 symlinkifne .zshrc
 
