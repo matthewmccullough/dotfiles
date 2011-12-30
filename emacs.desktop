@@ -1,0 +1,39 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Aug 19 12:49:09 2011
+;; Desktop file format version 206
+;; Emacs version 23.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("other" "smallest	" "John" "auc" "auctions" "installSc	" "_" "OSS" "flexHome" "fill" "TODO" "todo" ":16:" "TODO" "TODO$" "maven-gradle-comparison-simple"))
+(setq regexp-search-ring nil)
+(setq register-alist (list (list 12 '(frame-configuration ("Unprintable entity" ((parent-id) (explicit-name) (display . "zeus.home") (icon-name) (window-id . "2") (top . 182) (left . 273) (buried-buffer-list "Unprintable entity" "Unprintable entity" "Unprintable entity") (buffer-list "Unprintable entity" "Unprintable entity" "Unprintable entity") (unsplittable) (minibuffer . "Unprintable entity") (modeline . t) (width . 149) (height . 51) (name . "") (visibility . t) (mouse-color . "sienna1") (border-color . "black") (background-mode . dark) (display-type . color) (alpha) (scroll-bar-width . 15) (cursor-type . box) (auto-lower) (auto-raise) (icon-type) (title) (buffer-predicate) (tool-bar-lines . 1) (menu-bar-lines . 1) (right-fringe . 11) (left-fringe . 3) (line-spacing) (cursor-color . "yellow") (background-color . "black") (foreground-color . "White") (vertical-scroll-bars . right) (internal-border-width . 0) (border-width . 0) (font . "-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1") (fontsize . 0) (font-backend ns)) "Unprintable entity") ("Unprintable entity" ((parent-id) (explicit-name) (display . "zeus.home") (icon-name) (window-id . "3") (top . 182) (left . 94) (buried-buffer-list) (buffer-list "Unprintable entity") (unsplittable . t) (minibuffer) (modeline . t) (width . 20) (height . 52) (name . "Speedbar 1.0") (visibility . t) (mouse-color . "sienna1") (border-color . "black") (background-mode . dark) (display-type . color) (alpha) (scroll-bar-width . 15) (cursor-type . box) (auto-lower) (auto-raise) (icon-type) (title) (buffer-predicate) (tool-bar-lines . 0) (menu-bar-lines . 0) (right-fringe . 14) (left-fringe . 0) (line-spacing) (cursor-color . "yellow") (background-color . "black") (foreground-color . "White") (vertical-scroll-bars . right) (internal-border-width . 0) (border-width . 0) (font . "-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1") (fontsize . 0) (font-backend ns)) "Unprintable entity")) (let ((mk (make-marker))) (add-hook 'desktop-delay-hook (list 'lambda '() (list 'set-marker mk nil (get-buffer " *temp*")))) mk)) '(48 . "\n\n\n* Web site\n* Mailing list\n    * Buggy codehaus\n    * Contegix mailing list\n\n# Prototype of new Mailing List\n    * http://getsatisfaction.com/mozilla_messaging\n    * Champions\n    * Public list\n    * Email do I have a contact?\n\n# Web site\n    * Separate web sites for .com and org?\n    * CTO flavor focus on .com\n    * Developer flavor focus on .org\n    * Technical interview of HTML/CSS implementors\n    * Claudia to change training dates\n    * Mobile stylesheets\n    * Contegix hosted sitse\n    * Candidates\n        * Josh\n        * Jordan\n        * Ask Jay Zimmerman about his CSS designer\n        * Twitter query for other designers\n\n")))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  nil
+  ".dotfiles"
+  'dired-mode
+  '(abbrev-mode)
+  505
+  '(nil nil)
+  t
+  '("/Users/mccm06/.dotfiles/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/mccm06/Library/Application Support/Aquamacs Emacs/scratch buffer"
+  "scratch buffer"
+  'text-mode
+  '(abbrev-mode yas/minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . mule-utf-8-unix)))
+

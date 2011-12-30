@@ -1,13 +1,5 @@
 #!/bin/zsh
 
-echo "Setting up..."
-
-# Must be run from the shell config dir
-export SHELLCONFIGDIR=$PWD
-echo "SHELLCONFIGDIR = $SHELLCONFIGDIR"
-
-pushd ~
-
 function symlinkifne {
     echo "WORKING ON: $1"
     
@@ -16,19 +8,28 @@ function symlinkifne {
       echo "  WARNING: $1 already exists. Skipping."
     else
       # if not, create it
-      echo "  Symlinking $SHELLCONFIGDIR/$1 to $1"
-      ln -s $SHELLCONFIGDIR/$1 $1
+      export DOTLESS=`echo $1 | sed s/.//`
+      echo "  Symlinking $DOTFILESDIR/$DOTLESS to $1"
+      ln -s $DOTFILESDIR/$DOTLESS $1
     fi
 }
 
+
+echo "This script must be run from the dotfiles directory"
+echo "Setting up..."
+
+export DOTFILESDIR=$PWD
+echo "DOTFILESDIR = $DOTFILESDIR"
+
+pushd ~
+
 symlinkifne .autojump_py
-# symlinkifne .bash_gitprompt
 symlinkifne .bash_history
 symlinkifne .bash_profile
 symlinkifne .bashrc
 symlinkifne .boom
-symlinkifne .conf
 symlinkifne .cloudapp
+symlinkifne .conf
 symlinkifne .emacs_desktop
 symlinkifne .gemrc
 symlinkifne .gitconfig

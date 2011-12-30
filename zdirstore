@@ -1,0 +1,10 @@
+if [ -d ~/.emacs.d ]; then pushd -q ~/.emacs.d; fi
+if [ -d ~/Dropbox/Clients/Presentation-Patterns-Book/presentation-patterns_git/Notes,_Minutes,_Ideas,_Outlines ]; then pushd -q ~/Dropbox/Clients/Presentation-Patterns-Book/presentation-patterns_git/Notes,_Minutes,_Ideas,_Outlines; fi
+if [ -d ~/Dropbox/Teach/Courses ]; then pushd -q ~/Dropbox/Teach/Courses; fi
+if [ -d ~/Dropbox/Code ]; then pushd -q ~/Dropbox/Code; fi
+if [ -d ~/Documents/Temp ]; then pushd -q ~/Documents/Temp; fi
+if [ -d ~/Dropbox/Clients ]; then pushd -q ~/Dropbox/Clients; fi
+if [ -d ~/Documents/Temp/Scratch ]; then pushd -q ~/Documents/Temp/Scratch; fi
+if [ -d ~_www/Documents ]; then pushd -q ~_www/Documents; fi
+if [ -d ~/.dotfiles ]; then pushd -q ~/.dotfiles; fi
+if [ -d ~ ]; then pushd -q ~; fi
