@@ -16,7 +16,7 @@
 
 [gui]
 	fontdiff = -family Monaco -size 10 -weight normal -slant roman -underline 0 -overstrike 0
-	recentrepo = /Users/mccm06/Documents/Temp/Scratch/tracfone/hgw1
+	recentrepo = /Users/mccm06/Documents/Temp/Scratch/hello/hgw1
 
 [core]
 	excludesfile = ~/.gitignore
@@ -97,13 +97,13 @@
 	pushnotes = !sh -c 'git push $1 refs/notes/*' -
 	fetchnotes = !sh -c 'git fetch $1 refs/notes/*:refs/notes/*' -
 
-# Other alias ideas
-#testnewrepodoesntwork1 = !echo git init $1 && echo cd $1
-#testnewrepodoesntwork2 = !sh -c 'git init $1; echo hi' -
-#testnewrepodoesntwork3 = "!f() { git init $1}; f"
-#testbashgitinit = "!bash -c 'git init $0'"
-#testecho = !echo cd $1
-#testbashfunction = "!function gitme() { git init $1; echo now cd to $1; }; gitme"
+    # Other alias ideas that don't quite work yet
+    #testnewrepodoesntwork1 = !echo git init $1 && echo cd $1
+    #testnewrepodoesntwork2 = !sh -c 'git init $1; echo hi' -
+    #testnewrepodoesntwork3 = "!f() { git init $1}; f"
+    #testbashgitinit = "!bash -c 'git init $0'"
+    #testecho = !echo cd $1
+    #testbashfunction = "!function gitme() { git init $1; echo now cd to $1; }; gitme"
 
 
 [apply]
@@ -133,7 +133,7 @@
 [github]
     # https://github.com/blog/180-local-github-config
     user = matthewmccullough
-    token = d3cc4fff44b19e5e2027d719d66d8657
+    token = d3cc4fffdontyouwishitwere719d66d8657
 
 [url "git://github.com/"]
 	insteadOf = "ghg://"

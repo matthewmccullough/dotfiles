@@ -1,0 +1,9 @@
+.DS_Store
+*~
+.#*
+.gradle_targets
+gradle_targets
+.gradle
+gradle
+.gradletasknamecache
+gradletasknamecache
