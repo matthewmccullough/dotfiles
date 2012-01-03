@@ -109,3 +109,17 @@ function manp() {
   man -t $1 | open -f -a /Applications/Preview.app
 }
 
+# Show or hide all files in Mac OSX Finder
+function showhiddenfiles() {
+  defaults write com.apple.Finder AppleShowAllFiles YES
+  osascript -e 'tell application "Finder" to quit'
+  sleep 0.25
+  osascript -e 'tell application "Finder" to activate'
+}
+
+function hidehiddenfiles() {
+  defaults write com.apple.Finder AppleShowAllFiles NO
+  osascript -e 'tell application "Finder" to quit'
+  sleep 0.25
+  osascript -e 'tell application "Finder" to activate'
+}
