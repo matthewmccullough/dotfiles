@@ -4,6 +4,9 @@ These are Matthew McCullough's shell configuration dotfiles. The primary goal is
 # Focus
 The focus is on Zshell support, but there are plenty of cross-platform scripts in here. There are a few bash-specific ones.
 
+# Inspirations
+The contents of this repo have been partly invented from scratch, partly inspired by open source projects, and partly refactored from snippets from colleagues and friends. Many are attributed.
+
 # Acquiring This Repo
 This project contains submodules. It is suggested that you clone this into your home directory.
 
