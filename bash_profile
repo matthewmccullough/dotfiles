@@ -14,6 +14,6 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 shopt -s cmdhist
 
 
-source ~/.dotfiles/.bash_gitprompt
+source ~/.dotfiles/bash_gitprompt
 #source ~/scripts/git-completion.sh
-source /usr/local/Cellar/git/1.7.6/etc/bash_completion.d/git-completion.bash
+source /usr/local/Cellar/git/1.7.9/etc/bash_completion.d/git-completion.bash
