@@ -1,6 +1,11 @@
+#!/bin/sh
+
+#########################################
 # Connectivity
 alias ssh.bluehost='ssh presenu3@box683.bluehost.com'
-alias ssh.github='ssh git@github.com'
+
+
+#########################################
 # Commands to run apps
 alias run.jetty='cd /Applications/Dev/jetty-6.1.9;java -jar start.jar etc/jetty.xml'
 alias run.jmeter='${JMETER_HOME}/bin/jperf.sh'
@@ -9,6 +14,8 @@ alias run.clojure.repl='java -cp ${CLOJURE_HOME}/clojure.jar clojure.lang.Repl'
 alias run.jlineclojure.repl='java -cp ${CLOJURE_HOME}/jline-0.9.91.jar:${CLOJURE_HOME}/clojure.jar jline.ConsoleRunner clojure.lang.Repl'
 alias run.clojure.script='java -cp ${CLOJURE_HOME}/clojure.jar clojure.main'
 
+
+#########################################
 # Commands to change dirs
 alias to.gradlecode='cd ~/Documents/Code/Code_and_Docs/Gradle'
 alias to.temp='cd ${MYTEMP}'
@@ -18,8 +25,6 @@ alias to.processmobile='cd ~/Dropbox/Private/ProcessMobile'
 alias to.docs='cd ${MYDOCUMENTS}'
 alias to.clients='cd ~/Documents/Clients'
 alias to.code='cd ${MYCODE}'
-alias to.code.code='cd ${MYCODE}/Code_and_Docs'
-alias to.code.opensource='cd ${MYCODE}/Code_and_Docs'
 alias to.dosug='cd ~/Documents/Clients/DOSUG'
 alias to.scratch='cd ${MYSCRATCH}'
 alias to.teach='cd ${MYTEACH}'
@@ -33,40 +38,42 @@ alias to.gradleexamples='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_
 alias to.gradlesamples='cd ~/Documents/Code/Code_and_Docs/Gradle/gradle_core_git/subprojects/docs/src/samples'
 
 alias to.courses='cd ${MYCOURSES}'
-alias to.courses.maven2='cd ${MYCOURSES}/Mastering-Maven-2.0/examples'
-alias to.courses.maven3='cd ${MYCOURSES}/Mastering-Maven-3.0/examples_git'
 
-alias to.courses.git='cd ~/Documents/Teach/Courses/Git/repos'
-alias to.courses.gitexamples='cd ${MYCOURSES}/Git/repos/local_repo_examples'
+alias to.courses.git.repos='cd ~/Documents/Teach/Courses/Git'
+alias to.courses.git.outlines='cd ~/Documents/Teach/Courses/Git'
+alias to.courses.git.examples='cd ${MYCOURSES}/Git/repos/local_repo_examples'
 
-alias to.courses.debugjava='cd ${MYCOURSES}/Open-Source-Debugging-JavaTools/examples_git'
-alias to.courses.hadoop='cd ${MYCOURSES}/Hadoop/hadoop-examples_git'
-alias to.courses.encryption='cd ${MYCOURSES}/Cryptography/Cryptography-Boot-Camp/encryption-examples_git'
-alias to.courses.cryptography='cd ${MYCOURSES}/Cryptography/Cryptography-Boot-Camp/encryption-examples_git'
 alias to.courses.gradle='cd ~/Documents/Teach/Courses/Gradle-Fundamentals'
 alias to.courses.sonar='cd ~/Documents/Teach/Courses/Sonar'
 alias to.courses.jenkins='cd ~/Documents/Teach/Courses/Jenkins-CI'
 
-alias to.practice='cd ~/Documents/Code/Practice'
-alias to.reference='cd ~/Documents/Code/Reference'
 alias to.devapps='cd ${MYDEVAPPS}'
 
-alias aq=aquamacs
-alias dnsflush='dscacheutil -flushcache'
 
+#################################
+# Simple Program Name Shortening
+alias aq=aquamacs
 alias g=git
 
+
+#############################
+# Utilities
+
+# Flush the DNS on Mac
+alias dnsflush='dscacheutil -flushcache'
+
+# Copy and paste and prune the usless newline
 alias pbcopynn='tr -d "\n" | pbcopy'
 
-# No longer using autojump, but z-zsh instead
-# alias aj=autojump
-
+# Set the extended MacOS attributes on a file such that Quicklook will open it as text
 alias qltext='xattr -wx com.apple.FinderInfo "54 45 58 54 21 52 63 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $1'
 #alias qltext2='osascript -e tell application "Finder" to set file type of ((POSIX file "$1") as alias) to "TEXT"'
 
+# Git Scribe Commands
 alias gsgp='git scribe gen pdf && open output/book.pdf'
 alias gsgh='git scribe gen html && open output/book.html'
 
+# Show network connections
 # Often useful to prefix with SUDO to see more system level network usage
 alias network.connections='lsof -l -i +L -R -V'
 alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
@@ -78,6 +85,7 @@ alias files.open='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|
 # Files in use in the Users directory
 alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep Users'
 
+# Directory listings
 # LS_COLORS='no=01;37:fi=01;37:di=07;96:ln=01;36:pi=01;32:so=01;35:do=01;35:bd=01;33:cd=01;33:ex=01;31:mi=00;05;37:or=00;05;37:'
 # -G Add colors to ls
 # -l Long format
@@ -85,6 +93,10 @@ alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v
 # -p Postpend slash to folders
 alias ls='ls -G -h -p '
 alias ll='ls -l -G -h -p '
+
+
+#########################################
+# Utility Functions
 
 # Create a new git repo with one README commit and CD into it
 function gitnr() { mkdir $1; cd $1; git init; touch README; git add README; git commit -mFirst-commit;}
@@ -105,12 +117,13 @@ function matrix3() {
 echo -e "\e[1;40m" ; clear ; while :; do echo $LINES $COLUMNS $(( $RANDOM % $COLUMNS)) $( printf "\U$(( $RANDOM % 500 ))" ) ;sleep 0.05; done|gawk '{c=$4; letter=$4;a[$3]=0;for (x in a) {o=a[x];a[x]=a[x]+1; printf "\033[%s;%sH\033[2;32m%s",o,x,letter; printf "\033[%s;%sH\033[1;37m%s\033[0;0H",a[x],x,letter;if (a[x] >= $1) { a[x]=0; } }}'
 }
 
-# Use Mac OSX Preview to open a man page
+# Use Mac OSX Preview to open a man page in a more handsome format
 function manp() {
   man -t $1 | open -f -a /Applications/Preview.app
 }
 
-# Show or hide all files in Mac OSX Finder
+# Show normally hidden system and dotfile types of files
+# in Mac OSX Finder
 function showhiddenfiles() {
   defaults write com.apple.Finder AppleShowAllFiles YES
   osascript -e 'tell application "Finder" to quit'
@@ -118,6 +131,8 @@ function showhiddenfiles() {
   osascript -e 'tell application "Finder" to activate'
 }
 
+# Hide (back to defaults) normally hidden system and dotfile types of files
+# in Mac OSX Finder
 function hidehiddenfiles() {
   defaults write com.apple.Finder AppleShowAllFiles NO
   osascript -e 'tell application "Finder" to quit'
