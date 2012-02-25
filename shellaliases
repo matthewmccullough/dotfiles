@@ -39,8 +39,8 @@ alias to.gradlesamples='cd ~/Documents/Code/Code_and_Docs/Gradle/gradle_core_git
 
 alias to.courses='cd ${MYCOURSES}'
 
-alias to.courses.git.repos='cd ~/Documents/Teach/Courses/Git'
-alias to.courses.git.outlines='cd ~/Documents/Teach/Courses/Git'
+alias to.courses.git.repos='cd ${MYCOURSES}/Git/repos'
+alias to.courses.git.courseware='cd ${MYCOURSES}/Git/courseware'
 alias to.courses.git.examples='cd ${MYCOURSES}/Git/repos/local_repo_examples'
 
 alias to.courses.gradle='cd ~/Documents/Teach/Courses/Gradle-Fundamentals'
@@ -77,6 +77,8 @@ alias gsgh='git scribe gen html && open output/book.html'
 # Often useful to prefix with SUDO to see more system level network usage
 alias network.connections='lsof -l -i +L -R -V'
 alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
+alias network.internalip="ifconfig en0 | egrep -o '([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)'"
+alias network.externalip='curl -s http://checkip.dyndns.org/ | sed "s/[a-zA-Z<>/ :]//g"'
 
 # Files used, anywhere on the filesystem
 alias files.usage='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep'
