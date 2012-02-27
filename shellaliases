@@ -39,9 +39,11 @@ alias to.gradlesamples='cd ~/Documents/Code/Code_and_Docs/Gradle/gradle_core_git
 
 alias to.courses='cd ${MYCOURSES}'
 
+alias to.courses.git='cd ${MYCOURSES}/Git'
 alias to.courses.git.repos='cd ${MYCOURSES}/Git/repos'
-alias to.courses.git.courseware='cd ${MYCOURSES}/Git/courseware'
+alias to.courses.git.workshop='cd ${MYCOURSES}/Git/presentations/Git-Workshop'
 alias to.courses.git.examples='cd ${MYCOURSES}/Git/repos/local_repo_examples'
+alias to.courses.git.courseware='cd ${MYCOURSES}/Git/courseware'
 
 alias to.courses.gradle='cd ~/Documents/Teach/Courses/Gradle-Fundamentals'
 alias to.courses.sonar='cd ~/Documents/Teach/Courses/Sonar'
