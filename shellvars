@@ -28,5 +28,5 @@ export NEXUS_HOME=/Applications/Dev/nexus/nexus-webapp/
 #########################################################################
 # Tool settings
 #########################################################################
-export GRADLE_OPTS="-Dorg.gradle.daemon=true"
+#export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 export FLEX_HOME="/Applications/Dev/flex/flex_sdk_4.0.0.14159_mpl"
