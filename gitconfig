@@ -1,6 +1,6 @@
 [user]
 	name = Matthew McCullough
-	email = matthewm@ambientideas.com
+	email = matthew@github.com
 
 [color]
 # ui = true is a superset of all the more specific color options
@@ -134,6 +134,7 @@
 	fixup = "!sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -"
 	squash = "!sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -"
 	ccfq = "!sh -c 'git add $1 && git commit -m\"Placeholder\"' -"
+	logme = log --author=Matthew --stat -C
 
 
 [apply]
@@ -141,20 +142,22 @@
 [rerere]
 	enabled = 1
 
-[diff]
-	tool = araxis
 [difftool]
 	prompt = false
-#[difftool "myaraxis"]
-	# cmd = araxisgitdiff ONE $LOCAL THREE FOUR $REMOTE
+[difftool "myaraxis"]
+	cmd = araxisgitdiff ONE $LOCAL THREE FOUR $REMOTE
+[diff]
+#	tool = araxis
+	tool = myaraxis
 
-[merge]
-	tool = araxis
 [mergetool]
 	prompt = false
 	keepBackup = false
-#[mergetool "myaraxis"]
-    # cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
+[mergetool "myaraxis"]
+    cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
+[merge]
+#	tool = araxis
+	tool = myaraxis
 
 [branch]
     # Automatically set up pull to be --rebase
@@ -185,3 +188,5 @@
 [url "https://github.com/matthewmccullough/"]
     insteadOf = "ghhm://"
     pushInsteadOf = "ghhm://"
+[credential]
+	helper = cache
