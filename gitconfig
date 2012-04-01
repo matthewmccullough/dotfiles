@@ -85,7 +85,7 @@
 	pur = pull --rebase
 	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
 	orphank = !gitk --all `git reflog | cut -c1-7`&
-	orphanl = !git --pretty=oneline --abbrev-commit --graph --decorate `git reflog | cut -c1-7`
+	orphanl = !git log --pretty=oneline --abbrev-commit --graph --decorate `git reflog | cut -c1-7`
 	k = !exec gitk --all&
 	testecho1 = !sh -c 'echo with slash: zero=$0 one=$1 two=$2' -
 	# te1 RESULT: with slash: zero=- one=A two=B
@@ -98,7 +98,7 @@
 	purgeme = !git clean -fd && git reset --hard
 	prunenow = gc --prune=now
 	ri = rebase --interactive --autosquash
-	lol = log --pretty=oneline --abbrev-commit
+	lol = log --pretty=oneline --graph --abbrev-commit --all
 	blg = log --graph --decorate --all --abbrev-commit --pretty=oneline
 	slog = log --graph --simplify-by-decoration --all --abbrev-commit --pretty=oneline
 	lgso = log --graph --date=short --pretty=format:'%C(yellow)%h%Creset %cn%x09%cd %s%C(green bold)%d'
@@ -135,7 +135,9 @@
 	squash = "!sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -"
 	ccfq = "!sh -c 'git add $1 && git commit -m\"Placeholder\"' -"
 	logme = log --author=Matthew --stat -C
-
+	cob = checkout -b
+	sno = show --name-only
+	logsimple = log --graph --abbrev-commit --pretty=oneline --all --decorate
 
 [apply]
 	whitespace = nowarn
