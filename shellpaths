@@ -35,12 +35,10 @@ export PATH=$PATH:$NEXUS_HOME/bin/jsw/macosx-universal-64
 
 #Dev
 export PATH=$PATH:/Applications/Dev/apache-tomcat/bin
-#export PATH=$PATH:$EC2_HOME/bin
+export PATH=$PATH:/Applications/Dev/apache-maven/bin
 export PATH=$PATH:/Applications/Dev/sonar/bin/macosx-universal-64
-#export PATH=$PATH:/Applications/Dev/Bamboo
 export PATH=$PATH:/Library/PostgreSQL/8.4/bin
 export PATH=$PATH:$GRADLE_HOME/bin
-#export PATH=$PATH:/Applications/Dev/btrace/bin
 export PATH=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Commands:$PATH
 export PATH=~/.gem/ruby/1.8/bin:$PATH             #For showoff
 export PATH=$PATH:~/.cljr/bin/
@@ -50,3 +48,5 @@ export PATH=$PATH:~/.cabal/bin/
 
 #Git Bookmarking
 #export PATH=$PATH:~/Documents/Code/Code_and_Docs/Git/gitmarks_git
+PATH=$PATH:/Applications/Dev/jgit
+
