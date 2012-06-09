@@ -62,6 +62,11 @@ alias g=git
 #############################
 # Utilities
 
+alias timemachine.enablelocalversions='sudo tmutil enablelocal'
+alias timemachine.disablelocalversions='sudo tmutil disablelocal'
+
+alias hexdumpfile='od -h'
+
 # Flush the DNS on Mac
 alias dnsflush='dscacheutil -flushcache'
 
