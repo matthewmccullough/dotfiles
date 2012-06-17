@@ -220,7 +220,10 @@
 
 [github]
     # https://github.com/blog/180-local-github-config
-    user = matthewmccullough
+	user = matthewmccullough
     #token = MOVEALONG
 [hub]
 	protocol = https
+[gist]
+	private = yes
+	browse = yes
