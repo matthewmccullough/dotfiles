@@ -204,8 +204,11 @@
 [url "https://github.com/matthewmccullough/"]
     insteadOf = "ghhm://"
     pushInsteadOf = "ghhm://"
+
 [credential]
-	helper = cache --timeout=150
+	#helper = cache --timeout=150
+    helper = osxkeychain
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
@@ -219,3 +222,5 @@
     # https://github.com/blog/180-local-github-config
     user = matthewmccullough
     #token = MOVEALONG
+[hub]
+	protocol = https
