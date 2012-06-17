@@ -2,7 +2,7 @@
 
 #########################################
 # Connectivity
-alias ssh.bluehost='ssh presenu3@box683.bluehost.com'
+alias network.sshbluehost='ssh presenu3@box683.bluehost.com'
 
 
 #########################################
@@ -17,7 +17,6 @@ alias run.clojure.script='java -cp ${CLOJURE_HOME}/clojure.jar clojure.main'
 
 #########################################
 # Commands to change dirs
-alias to.gradlecode='cd ~/Documents/Code/Code_and_Docs/Gradle'
 alias to.temp='cd ${MYTEMP}'
 alias to.downloads='cd ${MYDOWNLOADS}'
 alias to.dropbox='cd ~/Dropbox'
@@ -30,11 +29,14 @@ alias to.dosug='cd ~/Documents/Clients/DOSUG'
 alias to.scratch='cd ${MYSCRATCH}'
 alias to.teach='cd ${MYTEACH}'
 alias to.ppap='cd ~/Documents/Clients/Presentation-Patterns-Book/presentation-patterns_git'
-alias to.gradle='cd ~/Documents/Clients/Gradleware'
-alias to.gradlebooks='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos'
-alias to.gradlebook1='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-1'
-alias to.gradlebook2='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-2'
-alias to.gradlebook3='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-3'
+alias to.github='cd ~/Documents/Code/GitHub'
+
+alias to.gradlecode='cd ~/Documents/Code/Code_and_Docs/Gradle'
+alias to.gradleware='cd ~/Documents/Clients/Gradleware'
+#alias to.gradlebooks='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos'
+#alias to.gradlebook1='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-1'
+#alias to.gradlebook2='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-2'
+#alias to.gradlebook3='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-3'
 alias to.gradleexamples='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-examples'
 alias to.gradlesamples='cd ~/Documents/Code/Code_and_Docs/Gradle/gradle_core_git/subprojects/docs/src/samples'
 
@@ -62,19 +64,24 @@ alias g=git
 #############################
 # Utilities
 
+alias timemachine.enablelocalversions='sudo tmutil enablelocal'
+alias timemachine.disablelocalversions='sudo tmutil disablelocal'
+
+alias hexdumpfile='od -h'
+
 # Flush the DNS on Mac
-alias dnsflush='dscacheutil -flushcache'
+alias network.dnsflush='dscacheutil -flushcache'
 
 # Copy and paste and prune the usless newline
 alias pbcopynn='tr -d "\n" | pbcopy'
 
 # Set the extended MacOS attributes on a file such that Quicklook will open it as text
-alias qltext='xattr -wx com.apple.FinderInfo "54 45 58 54 21 52 63 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $1'
-#alias qltext2='osascript -e tell application "Finder" to set file type of ((POSIX file "$1") as alias) to "TEXT"'
+alias finder.astext='xattr -wx com.apple.FinderInfo "54 45 58 54 21 52 63 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $1'
+#alias finder.qltext2='osascript -e tell application "Finder" to set file type of ((POSIX file "$1") as alias) to "TEXT"'
 
 # Git Scribe Commands
-alias gsgp='git scribe gen pdf && open output/book.pdf'
-alias gsgh='git scribe gen html && open output/book.html'
+alias gitscribe.gp='git scribe gen pdf && open output/book.pdf'
+alias gitscribe.gh='git scribe gen html && open output/book.html'
 
 # Show network connections
 # Often useful to prefix with SUDO to see more system level network usage
@@ -104,7 +111,7 @@ alias ll='ls -l -G -h -p '
 # Utility Functions
 
 # Create a new git repo with one README commit and CD into it
-function gitnr() { mkdir $1; cd $1; git init; touch README; git add README; git commit -mFirst-commit;}
+function git.nr() { mkdir $1; cd $1; git init; touch README; git add README; git commit -mFirst-commit;}
 
 # Restart Apache on Mac
 alias apacherestart="sudo /usr/sbin/apachectl restart"
@@ -129,7 +136,7 @@ function manp() {
 
 # Show normally hidden system and dotfile types of files
 # in Mac OSX Finder
-function showhiddenfiles() {
+function finder.showhiddenfiles() {
   defaults write com.apple.Finder AppleShowAllFiles YES
   osascript -e 'tell application "Finder" to quit'
   sleep 0.25
@@ -138,7 +145,7 @@ function showhiddenfiles() {
 
 # Hide (back to defaults) normally hidden system and dotfile types of files
 # in Mac OSX Finder
-function hidehiddenfiles() {
+function finder.hidehiddenfiles() {
   defaults write com.apple.Finder AppleShowAllFiles NO
   osascript -e 'tell application "Finder" to quit'
   sleep 0.25

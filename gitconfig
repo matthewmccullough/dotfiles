@@ -61,6 +61,7 @@
 	lpo = log --pretty=oneline --abbrev-commit --graph --decorate --all
 	l1 = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	l2 = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	l3 = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	spull = !git-svn fetch && git-svn rebase
 	spush = !git-svn dcommit
 	sync = !git pull && git push
@@ -138,6 +139,24 @@
 	cob = checkout -b
 	sno = show --name-only
 	logsimple = log --graph --abbrev-commit --pretty=oneline --all --decorate
+	gwcl = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	rlog = log --color-words --stat -3
+	lm = log --stat -M
+	
+	# Legit
+	legitsync = !legit sync \"$@\"
+	legitswitch = !legit switch \"$@\"
+	legitbranches = !legit branches
+	legitsprout = !legit sprout \"$@\"
+	legitunpublish = !legit unpublish \"$@\"
+	legitharvest = !legit harvest \"$@\"
+	legitpublish = !legit publish \"$@\"
+	legitgraft = !legit graft \"$@\"
+	
+	#Searches
+	findjuniodeletes = log --author=Junio --diff-filter=D --since=2.years.ago
+	
+
 
 [apply]
 	whitespace = nowarn
@@ -165,11 +184,6 @@
     # Automatically set up pull to be --rebase
     # autosetuprebase = always
 
-[github]
-    # https://github.com/blog/180-local-github-config
-    user = matthewmccullough
-    token = MOVEALONG
-
 [url "git://github.com/"]
 	insteadOf = "ghg://"
 	pushInsteadOf = "ghg://"
@@ -191,4 +205,17 @@
     insteadOf = "ghhm://"
     pushInsteadOf = "ghhm://"
 [credential]
-	helper = cache
+	helper = cache --timeout=150
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+	
+[http]
+#	proxy=http://something
+
+[github]
+    # https://github.com/blog/180-local-github-config
+    user = matthewmccullough
+    #token = MOVEALONG
