@@ -1,6 +1,6 @@
 [user]
-	name = Matthew McCullough
-	email = matthew@github.com
+	name = Matthew McCullough OSCON
+	email = matthew@githuboscon.com
 
 [color]
 # ui = true is a superset of all the more specific color options
@@ -156,7 +156,16 @@
 	#Searches
 	findjuniodeletes = log --author=Junio --diff-filter=D --since=2.years.ago
 	
-
+	#https://git.wiki.kernel.org/index.php?title=Aliases
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+	abbr = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
+	oneline ="!_() { $(test $# -eq 0 && echo xargs -L1) git log --no-walk --decorate --oneline \"$@\"; }; _"
+	tips = "!_() { t=$(git rev-list --no-merges --max-count=1 \"$@\"); if test -n \"$t\"; then echo $t; _ \"$@\" ^$t; fi; }; _"
+	empty-tree-sha1 = hash-object -t tree /dev/null
+	whitespaceviolations = "!git diff --check $(git empty-tree-sha1)"
+	patchforthis = "!git diff -p $(git empty-tree-sha1)"
+	tagcontains = git tag -l --contains HEAD
 
 [apply]
 	whitespace = nowarn
@@ -207,7 +216,7 @@
 
 [credential]
 	#helper = cache --timeout=150
-    helper = osxkeychain
+	#helper = osxkeychain
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
