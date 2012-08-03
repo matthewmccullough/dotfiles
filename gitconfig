@@ -215,7 +215,7 @@
     pushInsteadOf = "ghhm://"
 
 [credential]
-	#helper = cache --timeout=150
+	#helper = cache --timeout=300
 	#helper = osxkeychain
 
 [difftool "sourcetree"]
@@ -236,5 +236,3 @@
 [gist]
 	private = yes
 	browse = yes
-[credential]
-	helper = cache --timeout=300
