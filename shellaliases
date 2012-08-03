@@ -60,6 +60,9 @@ alias g=git
 
 #############################
 # Utilities
+alias zipall='for D in *; do zip -r "$D" "$D"; done'
+
+alias pram.reset='sudo nvram boot-args=”-p -r”'
 
 alias macports.cleansource='sudo port -f uninstall inactive'
 alias macports.cleanold='sudo port clean --all installed'
