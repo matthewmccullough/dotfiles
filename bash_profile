@@ -16,4 +16,4 @@ shopt -s cmdhist
 
 source ~/.dotfiles/bash_gitprompt
 #source ~/scripts/git-completion.sh
-source /usr/local/Cellar/git/1.7.9/etc/bash_completion.d/git-completion.bash
+source /usr/local/Cellar/git/1.7.11.3/etc/bash_completion.d/git-completion.bash
