@@ -21,29 +21,26 @@ alias to.temp='cd ${MYTEMP}'
 alias to.downloads='cd ${MYDOWNLOADS}'
 alias to.dropbox='cd ~/Dropbox'
 alias to.process='cd ${MYPROCESS}'
-alias to.processmobile='cd ~/Dropbox/Private/ProcessMobile'
 alias to.docs='cd ${MYDOCUMENTS}'
-alias to.clients='cd ~/Documents/Clients'
+alias to.clients='cd ~/Documents/AI-Clients'
 alias to.code='cd ${MYCODE}'
-alias to.dosug='cd ~/Documents/Clients/DOSUG'
+alias to.dosug='cd ~/Documents/AI-Clients/DOSUG'
 alias to.scratch='cd ${MYSCRATCH}'
 alias to.teach='cd ${MYTEACH}'
-alias to.ppap='cd ~/Documents/Clients/Presentation-Patterns-Book/presentation-patterns_git'
+alias to.ppap='cd ~/Documents/AI-Clients/Presentation-Patterns-Book/presentation-patterns_git'
 alias to.github='cd ~/Documents/Code/GitHub'
 
-alias to.gradlecode='cd ~/Documents/Code/Code_and_Docs/Gradle'
-alias to.gradleware='cd ~/Documents/Clients/Gradleware'
-#alias to.gradlebooks='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos'
-#alias to.gradlebook1='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-1'
-#alias to.gradlebook2='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-2'
-#alias to.gradlebook3='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-3'
-alias to.gradleexamples='cd ~/Documents/Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-examples'
-alias to.gradlesamples='cd ~/Documents/Code/Code_and_Docs/Gradle/gradle_core_git/subprojects/docs/src/samples'
+alias to.gradlecode='cd ~/Documents/Code/Gradle'
+alias to.gradleware='cd ~/Documents/AI-Clients/Gradleware'
+alias to.gradlebooks='cd ~/Documents/AI-Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos'
+alias to.gradlebook1='cd ~/Documents/AI-Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-1'
+alias to.gradleexamples='cd ~/Documents/AI-Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-examples'
+alias to.gradlesamples='cd ~/Documents/Code/Gradle/gradle_core_git/subprojects/docs/src/samples'
 
 alias to.courses='cd ${MYCOURSES}'
 
-alias to.courses.git='cd ${MYCOURSES}/Git'
-alias to.courses.git.repos='cd ${MYCOURSES}/Git/repos'
+alias to.courses.git='cd ~/Documents/GitHub-Training-Courseware/'
+alias to.courses.git.repos='cd ~/Documents/GitHub-Training-Courseware/repos'
 alias to.courses.git.workshop='cd ${MYCOURSES}/Git/presentations/Git-Workshop'
 alias to.courses.git.examples='cd ${MYCOURSES}/Git/repos/local_repo_examples'
 alias to.courses.git.courseware='cd ${MYCOURSES}/Git/courseware'
@@ -63,6 +60,13 @@ alias g=git
 
 #############################
 # Utilities
+
+alias macports.cleansource='sudo port -f uninstall inactive'
+alias macports.cleanold='sudo port clean --all installed'
+
+alias rubygems.update='sudo gem update --system'
+alias macports.update='sudo port selfupdate && sudo port upgrade outdated'
+alias brew.update='brew update && brew upgrade'
 
 alias timemachine.enablelocalversions='sudo tmutil enablelocal'
 alias timemachine.disablelocalversions='sudo tmutil disablelocal'
@@ -150,4 +154,9 @@ function finder.hidehiddenfiles() {
   osascript -e 'tell application "Finder" to quit'
   sleep 0.25
   osascript -e 'tell application "Finder" to activate'
+}
+
+# Get (cache) all Cheat sheets
+function cheat.getall() {
+	cheat sheets | grep '^  ' | xargs -n 1 -I {} bash -c 'cheat {} | :'
 }
