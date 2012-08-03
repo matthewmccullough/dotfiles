@@ -1,6 +1,6 @@
 [user]
-	name = Matthew McCullough OSCON
-	email = matthew@githuboscon.com
+	name = Matthew McCullough
+	email = matthew@github.com
 
 [color]
 # ui = true is a superset of all the more specific color options
@@ -236,3 +236,5 @@
 [gist]
 	private = yes
 	browse = yes
+[credential]
+	helper = cache --timeout=300
