@@ -21,6 +21,7 @@ alias to.dotfiles='cd ~/.dotfiles'
 alias to.temp='cd ${MYTEMP}'
 alias to.downloads='cd ${MYDOWNLOADS}'
 alias to.dropbox='cd ~/Dropbox'
+alias to.desktop='cd ~/Desktop'
 alias to.process='cd ${MYPROCESS}'
 alias to.docs='cd ${MYDOCUMENTS}'
 alias to.clients='cd ~/Documents/AI-Clients'
@@ -114,6 +115,8 @@ alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v
 alias ls='ls -G -h -p '
 alias ll='ls -l -G -h -p '
 
+# Teaching Functions
+alias git.helloreset='to.courses.git.repos;cd hellogitworld-bare.git; git push --mirror'
 
 #########################################
 # Utility Functions
