@@ -166,6 +166,10 @@
 	whitespaceviolations = "!git diff --check $(git empty-tree-sha1)"
 	patchforthis = "!git diff -p $(git empty-tree-sha1)"
 	tagcontains = git tag -l --contains HEAD
+	cccon = "config --global credential.helper 'cache --timeout=300'"
+	ccoff = "config --unset credential.helper"
+	cckon = "config --global credential.helper 'osxkeychain'"
+    
 
 [apply]
 	whitespace = nowarn
@@ -187,7 +191,7 @@
     cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
 [merge]
 #	tool = araxis
-	tool = myaraxis
+	tool = p4merge
 
 [branch]
     # Automatically set up pull to be --rebase
@@ -218,8 +222,6 @@
 	#helper = cache --timeout=300
 	#helper = osxkeychain
 
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
