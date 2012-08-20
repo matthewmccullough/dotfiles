@@ -167,7 +167,7 @@
 	patchforthis = "!git diff -p $(git empty-tree-sha1)"
 	tagcontains = git tag -l --contains HEAD
 	cc-cache = "config --global credential.helper 'cache --timeout=300'"
-	cc-off = "config --unset credential.helper"
+	cc-off = "config --unset --global credential.helper"
 	cc-helper = "config --global credential.helper 'osxkeychain'"
 
 
@@ -238,3 +238,4 @@
 [gist]
 	private = yes
 	browse = yes
+[credential]
