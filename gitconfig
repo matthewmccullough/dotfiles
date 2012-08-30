@@ -195,7 +195,7 @@
 
 [branch]
     # Automatically set up pull to be --rebase
-    # autosetuprebase = always
+    #autosetuprebase = always
 
 [url "git://github.com/"]
 	insteadOf = "ghg://"
@@ -218,10 +218,6 @@
     insteadOf = "ghhm://"
     pushInsteadOf = "ghhm://"
 
-[credential]
-	#helper = cache --timeout=300
-	#helper = osxkeychain
-
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -238,4 +234,3 @@
 [gist]
 	private = yes
 	browse = yes
-[credential]
