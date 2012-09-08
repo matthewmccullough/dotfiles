@@ -17,6 +17,7 @@ pushd ~
 .profile
 .rvmrc
 .shellaliases
+.shellactivities
 .shellpaths
 .shellvars
 .vimrc
@@ -42,6 +43,7 @@ pushd ~
 .netrc
 .profile
 .rvmrc
+.shellactivities
 .shellaliases
 .shellpaths
 .shellvars
@@ -59,3 +61,4 @@ pushd ~
 rm .zsh_history && ln -s $SHELLSCONFIGDIR/.zsh_history
 
 popd
+

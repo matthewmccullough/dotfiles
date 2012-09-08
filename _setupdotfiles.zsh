@@ -52,6 +52,7 @@ symlinkifne .gitignore
 symlinkifne .netrc
 symlinkifne .profile
 symlinkifne .rvmrc
+symlinkifne .shellactivities
 symlinkifne .shellaliases
 symlinkifne .shellpaths
 symlinkifne .shellvars

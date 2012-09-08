@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Productivity Sessions
+function work.ppap() {
+    open "http://presentationpatterns.com"
+	open "http://www.amazon.com/Presentation-Patterns-Techniques-Crafting-Presentations/dp/0321820800/ref=sr_1_1?ie=UTF8&qid=1347145745&sr=8-1&keywords=presentation+patterns"
+	open "https://github.com/presentationPatterns"
+	open "https://github.com/PresentationPatterns/presentationpatterns.github.com"
+
+	open "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book"
+	open "/Users/mccm06/Dropbox/PPAP"
+    iterm "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book" "PPAP-Book" black
+	iterm "/Users/mccm06/Dropbox/PPAP" "PPAP-Dropbox" black
+	iterm "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book/presentationpatterns.github.com" "PPAP-Site" "black"
+}

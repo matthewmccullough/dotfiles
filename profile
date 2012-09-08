@@ -14,3 +14,5 @@ export EDITOR='mate -w'
 source ~/.shellvars
 source ~/.shellpaths
 source ~/.shellaliases
+source ~/.shellactivities
+
