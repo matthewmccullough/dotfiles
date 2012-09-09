@@ -9,7 +9,31 @@ function work.ppap() {
 
 	open "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book"
 	open "/Users/mccm06/Dropbox/PPAP"
-    iterm "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book" "PPAP-Book" black
-	iterm "/Users/mccm06/Dropbox/PPAP" "PPAP-Dropbox" black
+    iterm "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book" "PPAP-Book" "black"
+	iterm "/Users/mccm06/Dropbox/PPAP" "PPAP-Dropbox" "black"
 	iterm "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book/presentationpatterns.github.com" "PPAP-Site" "black"
+}
+
+function work.teachgit() {
+    open "https://github.com/githubtrainer/hellogitworld" -a "Firefox"
+	open "https://github.com/githubstudent" -a "Google Chrome"
+	
+	open "https://github.com/github/teach.github.com"
+	open "https://github.com/training/free"
+	open "https://github.com/matthewmccullough/dotfiles"
+
+	open "/Users/mccm06/Documents/Temp/Scratch"
+    iterm "/Users/mccm06/Documents/Temp/Scratch" "Scratch" "black"
+}
+
+
+function work.gittraining() {
+    open "https://github.com/githubtraining"
+    open "https://github.com/github/training/issues"
+    open "https://github.com/github/teach.github.com"
+
+    open "/Users/mccm06/Documents/Code/GitHub"
+    open "/Users/mccm06/Documents/Code/GitHub/training.github.com_git"
+    open "/Users/mccm06/Documents/Code/GitHub/GUTS_git"
+    open "/Users/mccm06/Documents/Code/GitHub/teach.github.com"
 }
