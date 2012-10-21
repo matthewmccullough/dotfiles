@@ -2,14 +2,10 @@
 
 #########################################
 # Connectivity
-alias network.sshbluehost='ssh presenu3@box683.bluehost.com'
 
 
 #########################################
 # Commands to run apps
-alias run.jetty='cd /Applications/Dev/jetty-6.1.9;java -jar start.jar etc/jetty.xml'
-alias run.jmeter='${JMETER_HOME}/bin/jperf.sh'
-alias run.nexus='nexus start'
 alias run.clojure.repl='java -cp ${CLOJURE_HOME}/clojure.jar clojure.lang.Repl'
 alias run.jlineclojure.repl='java -cp ${CLOJURE_HOME}/jline-0.9.91.jar:${CLOJURE_HOME}/clojure.jar jline.ConsoleRunner clojure.lang.Repl'
 alias run.clojure.script='java -cp ${CLOJURE_HOME}/clojure.jar clojure.main'
@@ -24,19 +20,20 @@ alias to.dropbox='cd ~/Dropbox'
 alias to.desktop='cd ~/Desktop'
 alias to.process='cd ${MYPROCESS}'
 alias to.docs='cd ${MYDOCUMENTS}'
-alias to.clients='cd ~/Documents/AI-Clients'
+alias to.clients='cd ~/Documents/AI-Clients-Matthew'
 alias to.code='cd ${MYCODE}'
-alias to.dosug='cd ~/Documents/AI-Clients/DOSUG'
+alias to.dosug='cd ~/Documents/AI-Clients-Matthew/DOSUG'
 alias to.scratch='cd ${MYSCRATCH}'
 alias to.teach='cd ${MYTEACH}'
-alias to.ppap='cd ~/Documents/AI-Clients/Presentation-Patterns-Book/presentation-patterns_git'
+alias to.ppap='cd ~/Documents/AI-Clients-Matthew/Pearson, Addison Wesley/Presentation-Patterns-Book'
 alias to.github='cd ~/Documents/Code/GitHub'
+alias to.homebrew='cd /usr/local/Library'
 
 alias to.gradlecode='cd ~/Documents/Code/Gradle'
-alias to.gradleware='cd ~/Documents/AI-Clients/Gradleware'
-alias to.gradlebooks='cd ~/Documents/AI-Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos'
-alias to.gradlebook1='cd ~/Documents/AI-Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-1'
-alias to.gradleexamples='cd ~/Documents/AI-Clients/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-examples'
+alias to.gradleware='cd ~/Documents/AI-Clients-Matthew/Gradleware'
+alias to.gradlebooks='cd ~/Documents/AI-Clients-Matthew/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos'
+alias to.gradlebook1='cd ~/Documents/AI-Clients-Matthew/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-1'
+alias to.gradleexamples='cd ~/Documents/AI-Clients-Matthew/Gradleware/Gradle_Books_OReilly_SVN_and_Git_Repos/oreilly-gradle-book-examples'
 alias to.gradlesamples='cd ~/Documents/Code/Gradle/gradle_core_git/subprojects/docs/src/samples'
 
 alias to.courses='cd ${MYCOURSES}'
@@ -46,7 +43,6 @@ alias to.courses.git.repos='cd ~/Documents/GitHub-Training-Courseware/repos'
 alias to.courses.git.workshop='cd ${MYCOURSES}/Git/presentations/Git-Workshop'
 alias to.courses.git.examples='cd ${MYCOURSES}/Git/repos/local_repo_examples'
 alias to.courses.git.courseware='cd ${MYCOURSES}/Git/courseware'
-
 alias to.courses.gradle='cd ~/Documents/Teach/Courses/Gradle-Fundamentals'
 alias to.courses.sonar='cd ~/Documents/Teach/Courses/Sonar'
 alias to.courses.jenkins='cd ~/Documents/Teach/Courses/Jenkins-CI'
@@ -116,7 +112,8 @@ alias ls='ls -G -h -p '
 alias ll='ls -l -G -h -p '
 
 # Teaching Functions
-alias git.helloreset='to.courses.git.repos;cd hellogitworld-bare.git; git push --mirror'
+alias class.resethello='to.courses.git.repos;cd hellogitworld-bare.git; git push --mirror'
+alias class.simpleprompt='export PS1=" $ "'
 
 #########################################
 # Utility Functions
@@ -167,3 +164,9 @@ function finder.hidehiddenfiles() {
 function cheat.getall() {
 	cheat sheets | grep '^  ' | xargs -n 1 -I {} bash -c 'cheat {} | :'
 }
+
+function find.name() {
+  wild=\'\*$1\*\'
+  sh -c "find . -iname $wild"
+}
+
