@@ -61,7 +61,7 @@
 	lpo = log --pretty=oneline --abbrev-commit --graph --decorate --all
 	l1 = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	l2 = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	l3 = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	l3 = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	spull = !git-svn fetch && git-svn rebase
 	spush = !git-svn dcommit
 	sync = !git pull && git push
@@ -171,12 +171,15 @@
 	cc-off = "config --unset --global credential.helper"
 	cc-helper = "config --global credential.helper 'osxkeychain'"
 	logm = log --stat -M
+	logcpy = log --stat -1 -C -C
+	pushsvn = svn dcommit
+	pullsvn = svn rebase
 
 
 [apply]
 	whitespace = nowarn
 [rerere]
-	enabled = 1
+	enabled = true
 
 [difftool]
 	prompt = false
@@ -236,3 +239,6 @@
 [gist]
 	private = yes
 	browse = yes
+[ghi]
+	token = 64a818626c1c27d9abf2f9cbacc460f11e0d973f
+[credential]
