@@ -1,13 +1,13 @@
 #########################################################################
 # Temporary aliases useful for demos, other current projects
 #########################################################################
-export MYTEMP=~/Documents/Temp
+export MYTEMP=~/Documents/Scratch
 export MYCODE=~/Documents/Code
-export MYARCHIVEDEV=~/Documents/Temp/Archive/Dev
-export MYARCHIVEAPPS=~/Documents/Temp/Archive/Apps
-export MYSCRATCH=~/Documents/Temp/Scratch
-export MYPROCESS=~/Dropbox/TOPROCESS
-export MYDOWNLOADS=~/Documents/Temp/Downloads
+export MYARCHIVEDEV=~/Documents/Temp-ArchiveDisk
+export MYARCHIVEAPPS=~/Documents/Temp-ArchiveDisk
+export MYSCRATCH=~/Documents/Scratch
+export MYPROCESS=~/Dropbox/Temp-Process
+export MYDOWNLOADS=~/Documents/Downloads
 export MYDOCUMENTS=~/Documents
 export MYTEACH=~/Documents/Teach
 export MYCOURSES=~/Documents/Teach/Courses

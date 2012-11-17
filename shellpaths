@@ -18,8 +18,8 @@ export MANPATH=$MANPATH:/opt/local/share/man
 #export PATH=$PATH:$ANT_HOME/bin
 export PATH=$PATH:$M2_HOME/bin
 export PATH=$PATH:$GROOVY_HOME/bin
-export PATH=$PATH:$GRAILS_HOME/bin
-export PATH=$PATH:$NEXUS_HOME/bin/jsw/macosx-universal-64
+#export PATH=$PATH:$GRAILS_HOME/bin
+#export PATH=$PATH:$NEXUS_HOME/bin/jsw/macosx-universal-64
 #export PATH=$PATH:$JMETER_HOME/bin
 #export PATH=$PATH:$JRUBY_HOME/bin
 #export PATH=$PATH:$SOAPUI_HOME/bin
@@ -29,11 +29,11 @@ export PATH=$PATH:$NEXUS_HOME/bin/jsw/macosx-universal-64
 export PATH=$PATH:/Applications/Dev/apache-tomcat/bin
 export PATH=$PATH:/Applications/Dev/apache-maven/bin
 export PATH=$PATH:/Applications/Dev/sonar/bin/macosx-universal-64
-export PATH=$PATH:/Library/PostgreSQL/8.4/bin
+#export PATH=$PATH:/Library/PostgreSQL/8.4/bin
 export PATH=$PATH:/Applications/Dev/gradle/bin
 export PATH=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Commands:$PATH
 export PATH=~/.gem/ruby/1.8/bin:$PATH             #For showoff
-export PATH=$PATH:~/.cljr/bin
+#export PATH=$PATH:~/.cljr/bin
 
 # Haskell
 export PATH=$PATH:~/.cabal/bin
