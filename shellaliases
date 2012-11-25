@@ -170,3 +170,10 @@ function find.name() {
   sh -c "find . -iname $wild"
 }
 
+function history.150() {
+    tail -150 ~/.zsh_history | cut -c 16- | subl&
+}
+
+function history.400() {
+    tail -400 ~/.zsh_history | cut -c 16- | subl&
+}
