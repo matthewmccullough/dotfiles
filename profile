@@ -16,3 +16,5 @@ source ~/.shellpaths
 source ~/.shellaliases
 source ~/.shellactivities
 
+eval "$(rbenv init -)"
+
