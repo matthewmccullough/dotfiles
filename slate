@@ -1,0 +1,70 @@
+#bind tab:cmd switch
+
+alias showNormalHint hint AOEUIDHTNSYXFBPKGMCW
+alias showHintsLeftHand hint AOEUIYQJKX
+
+bind e:cmd ${showHintsLeftHand}
+bind tab:cmd;alt switch
+
+bind right:ctrl;alt nudge +10% +0
+bind left:ctrl;alt  nudge -10% +0
+bind up:ctrl;alt    nudge +0   -10%
+bind down:ctrl;alt  nudge +0   +10%
+
+bind right:ctrl;shift push right bar-resize:screenSizeX/3
+bind left:ctrl;shift  push left  bar-resize:screenSizeX/3
+bind up:ctrl;shift    push up    bar-resize:screenSizeY/2
+bind down:ctrl;shift  push down  bar-resize:screenSizeY/2
+
+bind right:ctrl resize +10% +0
+bind left:ctrl  resize -10% +0
+bind up:ctrl    resize +0   -10%
+bind down:ctrl  resize +0   +10%
+bind right:alt  resize -10% +0 bottom-right
+bind left:alt   resize +10% +0 bottom-right
+bind up:alt     resize +0   +10% bottom-right
+bind down:alt   resize +0   -10% bottom-right
+
+bind right:cmd    focus right
+bind left:cmd     focus left
+bind up:cmd       focus up
+bind down:cmd     focus down
+bind up:cmd;alt   focus behind
+bind down:cmd;alt focus behind
+
+# General aliases
+alias sox screenOriginX
+alias soy screenOriginY
+alias ssx screenSizeX
+alias ssy screenSizeY
+
+# Position aliases
+alias centered ${sox}+${ssx}/8;${soy}+${ssy}/8 ${ssx}/8*6;${ssy}/8*6
+alias fullscreen ${sox};${soy} ${ssx};${ssy}
+alias leftHalf ${sox};${soy} ${ssx}/2;${ssy}
+alias bottomHalf ${sox};${soy}+${ssy}/2 ${ssx};${ssy}/2
+alias topHalf ${sox};${soy} ${ssx};${ssy}/2
+alias rightHalf ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}
+alias topLeftQuarter ${sox};${soy} ${ssx}/2;${ssy}/2
+alias topRightQuarter ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}/2
+alias bottomLeftQuarter ${sox};${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
+alias bottomRightQuarter ${sox}+${ssx}/2;${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
+
+bind g:cmd;ctrl move ${centered}
+bind o:cmd;ctrl move ${fullscreen}
+bind h:cmd;ctrl move ${leftHalf}
+bind j:cmd;ctrl move ${bottomHalf}
+bind k:cmd;ctrl move ${topHalf}
+bind l:cmd;ctrl move ${rightHalf}
+bind u:cmd;ctrl move ${topLeftQuarter}
+bind i:cmd;ctrl move ${topRightQuarter}
+bind n:cmd;ctrl move ${bottomLeftQuarter}
+bind m:cmd;ctrl move ${bottomRightQuarter}
+
+bind ;:cmd;ctrl throw previous
+bind /:cmd;ctrl hint ASDFJKLGH
+
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
