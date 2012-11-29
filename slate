@@ -68,11 +68,14 @@ bind ;:cmd;alt;ctrl;shift throw previous
 
 config windowHintsShowIcons true
 config windowHintsFontColor 255;0;0;1.0
-config windowHintsWidth 200
-config windowHintsHeight 200
-config windowHintsBackgroundColor 50;53;200;0.9
+#config windowHintsWidth 200
+#config windowHintsHeight 200
+#config windowHintsBackgroundColor 50;53;200;0.9
 config windowHintsIgnoreHiddenWindows false
-config windowHintsSpread true
+#config windowHintsSpread true
+config windowHintsSpreadSearchWidth 200
+config windowHintsSpreadSearchHeight 200
+config windowHintsSpreadPadding 200
 
 bind 1:cmd;alt;ctrl;shift grid
 
