@@ -15,9 +15,14 @@ setopt    sharehistory      #Share history across terminals
 setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
 
 ##############################################################################
-# z-zsh setup
+# sjl/z-zsh setup
 ##############################################################################
-. ~/.dotfiles/z-zsh/z.sh
-function precmd () {
-  z --add "$(pwd -P)"
-}
+#. ~/.dotfiles/z-zsh/z.sh
+#function precmd () {
+#  z --add "$(pwd -P)"
+#}
+
+##############################################################################
+# rupa/z setup
+##############################################################################
+. ~/.dotfiles/z-rupa/z.sh
