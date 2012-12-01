@@ -175,6 +175,7 @@
 	pushsvn = svn dcommit
 	pullsvn = svn rebase
 	nfjsunpushed = log origin/master..master --oneline
+	rtheirs = !git checkout --theirs ./ && git add . && git rebase --continue
 
 
 [apply]
@@ -245,3 +246,5 @@
 #[credential]
 #	helper = cache --timeout=300
 
+[push]
+	default = matching
