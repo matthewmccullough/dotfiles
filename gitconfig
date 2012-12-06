@@ -190,6 +190,7 @@
 [diff]
 #	tool = araxis
 	tool = myaraxis
+	renames = true
 
 [mergetool]
 	prompt = false
@@ -248,3 +249,4 @@
 
 [push]
 	default = matching
+
