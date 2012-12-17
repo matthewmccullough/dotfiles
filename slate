@@ -12,8 +12,8 @@ bind e:cmd;alt;ctrl;shift ${showHintsLeftHand}
 #bind up:ctrl;alt    nudge +0   -10%
 #bind down:ctrl;alt  nudge +0   +10%
 
-bind right:cmd;alt;ctrl;shift push right bar-resize:screenSizeX/3
-bind left:cmd;alt;ctrl;shift  push left  bar-resize:screenSizeX/3
+bind right:cmd;alt;ctrl;shift push right bar-resize:screenSizeX/2
+bind left:cmd;alt;ctrl;shift  push left  bar-resize:screenSizeX/2
 bind up:cmd;alt;ctrl;shift    push up    bar-resize:screenSizeY/2
 bind down:cmd;alt;ctrl;shift  push down  bar-resize:screenSizeY/2
 
