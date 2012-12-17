@@ -169,7 +169,9 @@
 	tagcontains = git tag -l --contains HEAD
 	cc-cache = "config --global credential.helper 'cache --timeout=300'"
 	cc-off = "config --unset --global credential.helper"
-	cc-helper = "config --global credential.helper 'osxkeychain'"
+	cc-helperosx = "config --global credential.helper 'osxkeychain'"
+	cc-helperwin = "config --global credential.helper 'wincred'"
+	cc-helperlin = "config --global credential.helper '/pathto/git-credential-gnome-key'"
 	logm = log --stat -M
 	logcpy = log --stat -1 -C -C
 	pushsvn = svn dcommit

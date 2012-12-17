@@ -1,10 +1,12 @@
+#!/bin/zsh
+
 ##############################################################################
-#Import the shell-agnostic (Bash or Zsh) environment config
+# Import the shell-agnostic (Bash or Zsh) environment config
 ##############################################################################
 source ~/.profile
 
 ##############################################################################
-# History Configuration
+# ZShell History Configuration
 ##############################################################################
 HISTSIZE=5000               #How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     #Where to save history to disk
@@ -15,7 +17,8 @@ setopt    sharehistory      #Share history across terminals
 setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
 
 ##############################################################################
-# sjl/z-zsh setup
+# sjl/z-zsh setup (Path frecency like autojump)
+# Deprecated in favor of the better rupa/z
 ##############################################################################
 #. ~/.dotfiles/z-zsh/z.sh
 #function precmd () {
@@ -23,6 +26,6 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 #}
 
 ##############################################################################
-# rupa/z setup
+# rupa/z setup (path frecency with tab completion)
 ##############################################################################
 . ~/.dotfiles/z-rupa/z.sh

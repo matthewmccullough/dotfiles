@@ -1,3 +1,9 @@
+#!/bin/zsh
+
+# ---------------------------------------------------------------------
+# oh-my-zsh setup
+# ---------------------------------------------------------------------
+
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 
@@ -5,6 +11,7 @@ export ZSH=$HOME/.dotfiles/oh-my-zsh
 # Look in $ZSH/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+
 #export ZSH_THEME="gozilla"
 export ZSH_THEME="fino"
 #export ZSH_THEME="takashiyoshida"
@@ -23,9 +30,6 @@ export CASE_SENSITIVE="true"
 # export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew macports osx rvm gradle ant compleat dirpersist gem ssh-agent cloudapp)
+plugins=(git battery brew osx gradle ant compleat dirpersist gem ssh-agent cloudapp ruby textmate sublime)
 
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...

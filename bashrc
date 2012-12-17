@@ -1,5 +1,8 @@
-source ~/.bash_profile
+#!/bin/bash
 
-#For Autojump
-# No longer using Autojump, but z-zsh instead
-# source /etc/profile.d/autojump.bash
+########################################################################
+# Bash non-interactive session setup
+########################################################################
+
+# Bash non-interactive shell will load the same functions as the interactive shell
+source ~/.bash_profile

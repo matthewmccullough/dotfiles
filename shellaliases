@@ -170,16 +170,17 @@ function find.name() {
   sh -c "find . -iname $wild"
 }
 
-function history.150() {
-    tail -150 ~/.zsh_history | cut -c 16- | subl&
-}
-
-function history.400() {
-    tail -400 ~/.zsh_history | cut -c 16- | subl&
-}
-
 alias lessc='less -R' # Lets color escape sequences carry through to less
 alias morec='more -R'
 alias lesscolor='less -R'
 alias morecolor='more -R'
 
+function screenshot.setjpg() {
+    defaults write com.apple.screencapture type jpg
+    killall SystemUIServer
+}
+
+function screenshot.setpng() {
+    defaults write com.apple.screencapture type png
+	killall SystemUIServer
+}
