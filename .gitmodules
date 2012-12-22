@@ -9,4 +9,4 @@
 	url = git://github.com/robbyrussell/oh-my-zsh.git
 [submodule "z-rupa"]
 	path = z-rupa
-	url = ./z-rupa
+	url = https://github.com/rupa/z
