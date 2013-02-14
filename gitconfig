@@ -37,7 +37,7 @@
 	quotepath = false
 	autocrlf = input
 	safecrlf = warn
-	editor = mate -w
+	editor = vim
 
 [alias]
 	br = branch -a
@@ -240,7 +240,7 @@
 	user = matthewmccullough
     #token = MOVEALONG
 [hub]
-	protocol = https
+	#protocol = https
 [gist]
 	private = yes
 	browse = yes
