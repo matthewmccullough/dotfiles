@@ -22,4 +22,5 @@ source ~/.shellactivities
 
 ###################
 # Load rbenv, an alternative to rvm for Ruby selection on a per-project basis
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
+
