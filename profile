@@ -24,3 +24,9 @@ source ~/.shellactivities
 # Load rbenv, an alternative to rvm for Ruby selection on a per-project basis
 # eval "$(rbenv init -)"
 
+######################
+# Load boxen, if it exists
+if [ -d "/opt/boxen" ]; then
+    source /opt/boxen/env.sh
+fi
+
