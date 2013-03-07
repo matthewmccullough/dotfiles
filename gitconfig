@@ -240,7 +240,7 @@
 	user = matthewmccullough
     #token = MOVEALONG
 [hub]
-	#protocol = https
+	protocol = https
 [gist]
 	private = yes
 	browse = yes
