@@ -29,7 +29,6 @@
 	#untracked = cyan
 
 [gui]
-	fontdiff = -family Monaco -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 	recentrepo = /Users/mccm06/Documents/Temp/Scratch/hello/hgw1
 
 [core]
@@ -41,7 +40,7 @@
 
 [alias]
 	br = branch -a
-	s = status -s -u
+	s = status -u -s
 	cl = log --stat -C -2
 	c = commit
 	co = checkout
@@ -178,6 +177,7 @@
 	pullsvn = svn rebase
 	nfjsunpushed = log origin/master..master --oneline
 	rtheirs = !git checkout --theirs ./ && git add . && git rebase --continue
+	logfive = log --graph --pretty=oneline --abbrev-commit --decorate --all -5
 
 
 [apply]
