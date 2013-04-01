@@ -33,7 +33,7 @@
 	recentrepo = /Users/mccm06/Documents/Temp/Scratch/hello/hgw1
 
 [core]
-	excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = /Users/mccm06/.gitignore
 	quotepath = false
 	autocrlf = input
 	safecrlf = warn
