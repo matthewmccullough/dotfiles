@@ -1,8 +1,6 @@
-#!/bin/zsh
-
-# ---------------------------------------------------------------------
+##############################################################################
 # oh-my-zsh setup
-# ---------------------------------------------------------------------
+##############################################################################
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
@@ -33,3 +31,9 @@ export CASE_SENSITIVE="true"
 plugins=(git battery brew osx gradle ant compleat dirpersist gem ssh-agent cloudapp ruby textmate sublime)
 
 source $ZSH/oh-my-zsh.sh
+
+##############################################################################
+# Boxen setup
+##############################################################################
+source /opt/boxen/env.sh
+

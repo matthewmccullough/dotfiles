@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 ##############################################################################
 # Import the shell-agnostic (Bash or Zsh) environment config
 ##############################################################################
@@ -17,15 +15,7 @@ setopt    sharehistory      #Share history across terminals
 setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
 
 ##############################################################################
-# sjl/z-zsh setup (Path frecency like autojump)
-# Deprecated in favor of the better rupa/z
-##############################################################################
-#. ~/.dotfiles/z-zsh/z.sh
-#function precmd () {
-#  z --add "$(pwd -P)"
-#}
-
-##############################################################################
 # rupa/z setup (path frecency with tab completion)
 ##############################################################################
-. ~/.dotfiles/z-rupa/z.sh
+source ~/.dotfiles/z-rupa/z.sh
+
