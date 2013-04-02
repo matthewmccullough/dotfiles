@@ -8,8 +8,8 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/.dotfiles/scripts
 
 # Brew
-export PATH=/usr/local/sbin:$PATH
-#export PATH=/usr/local/bin:$PATH
+export PATH=/opt/boxen/homebrew/sbin:$PATH
+#export PATH=/opt/boxen/homebrew/bin:$PATH
 
 # MacPorts
 ## Having MacPorts first instead of after $PATH causes a GitK error
