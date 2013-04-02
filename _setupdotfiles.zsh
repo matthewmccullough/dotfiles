@@ -63,6 +63,7 @@ symlinkifne .zprofile
 #symlinkifne .zsh
 symlinkifne .zshenv
 symlinkifne .zshrc
+symlinkifne .vim
 
 popd
 
