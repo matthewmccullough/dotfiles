@@ -48,7 +48,7 @@ symlinkifne .cloudapp
 symlinkifne .conf
 symlinkifne .gemrc
 symlinkifne .gitconfig
-symlinkifne .gitignore
+# symlinkifne .gitignore
 symlinkifne .netrc
 symlinkifne .profile
 symlinkifne .rvmrc
@@ -66,8 +66,3 @@ symlinkifne .zshrc
 
 popd
 
-# Ignore changes to these two files since they are local history
-git update-index --assume-unchanged bash_history
-git update-index --assume-unchanged zsh_history
-git update-index --assume-unchanged zsh-update
-git update-index --assume-unchanged zdirstore
