@@ -232,6 +232,8 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 	
+[difftool "p4merge"]
+	cmd = \"/Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE\"
 [http]
 #	proxy=http://something
 
