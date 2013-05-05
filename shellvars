@@ -33,3 +33,6 @@ export JAVA_HOME=/Library/Java/Home
 #export PAGER="less"
 # Set less to have a default flag of -R (RAW) so color passes through
 #export LESS="-R"
+
+GPG_TTY=$(tty)
+export GPG_TTY
