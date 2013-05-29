@@ -1,1 +1,1 @@
-export rvm_path="/Users/mccm06/.rvm"
+# Don't do this - it is deprecated and a bad way to manage gem files
