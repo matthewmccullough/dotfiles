@@ -24,4 +24,4 @@ shopt -s cmdhist
 source ~/.dotfiles/bash_gitprompt
 
 # Load Brew's git bash completion
-source /usr/local/Cellar/git/1.8.0.1/etc/bash_completion.d/git-completion.bash
+# source /usr/local/Cellar/git/1.8.0.1/etc/bash_completion.d/git-completion.bash
