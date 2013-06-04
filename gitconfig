@@ -219,14 +219,14 @@
 	insteadOf = "ghs://"
 	pushInsteadOf = "ghs://"
 [url "git@github.com:matthewmccullough/"]
-    insteadOf = "ghsm://"
-    pushInsteadOf = "ghsm://"
+	insteadOf = "ghsm://"
+	pushInsteadOf = "ghsm://"
 [url "https://github.com/"]
 	insteadOf = "ghh://"
 	pushInsteadOf = "ghh://"
 [url "https://github.com/matthewmccullough/"]
-    insteadOf = "ghhm://"
-    pushInsteadOf = "ghhm://"
+	insteadOf = "ghhm://"
+	pushInsteadOf = "ghhm://"
 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
@@ -235,22 +235,21 @@
 [difftool "p4merge"]
 	cmd = \"/Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE\"
 [http]
-#	proxy=http://something
+	# proxy=http://something
 
 [github]
-    # https://github.com/blog/180-local-github-config
+	# https://github.com/blog/180-local-github-config
 	user = matthewmccullough
-    #token = MOVEALONG
+	#token = PLACEHOLDER
 [hub]
 	protocol = https
 [gist]
 	private = yes
 	browse = yes
 [ghi]
-	token = 64a818626c1c27d9abf2f9cbacc460f11e0d973f
+	token = PLACEHOLDER
 #[credential]
-#	helper = cache --timeout=300
+	# helper = cache --timeout=300
 
 [push]
 	default = matching
-
