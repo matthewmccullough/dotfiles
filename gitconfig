@@ -178,6 +178,7 @@
 	nfjsunpushed = log origin/master..master --oneline
 	rtheirs = !git checkout --theirs ./ && git add . && git rebase --continue
 	logfive = log --graph --pretty=oneline --abbrev-commit --decorate --all -5
+	noderelnotes = git log --graph --pretty=format:'%h%d %s (%an)'
 
 
 [apply]
