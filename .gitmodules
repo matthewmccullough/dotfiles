@@ -10,3 +10,22 @@
 [submodule "z-rupa"]
 	path = z-rupa
 	url = https://github.com/rupa/z
+
+[submodule "vim-fugitive"]
+    path = vim/bundle/vim-fugitive
+    url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim-markdown"]
+    path = vim/bundle/vim-markdown
+    url = git://github.com/tpope/vim-markdown.git
+[submodule "vim-sensible"]
+    path = vim/bundle/vim-sensible
+    url = git://github.com/tpope/vim-sensible.git
+[submodule "vim-liquid"]
+    path = vim/bundle/vim-liquid
+    url = git://github.com/tpope/vim-liquid.git
+[submodule "vim-scriptease"]
+    path = vim/bundle/vim-scriptease
+    url = git://github.com/tpope/vim-scriptease.git
+[submodule "vim-surround"]
+    path = vim/bundle/vim-surround
+    url = git://github.com/tpope/vim-surround.git
