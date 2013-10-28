@@ -32,7 +32,7 @@
 	recentrepo = /Users/mccm06/Documents/Temp/Scratch/hello/hgw1
 
 [core]
-	excludesfile = /Users/mccm06/.gitignore
+	excludesfile = ~/.gitignore
 	quotepath = false
 	autocrlf = input
 	safecrlf = warn
