@@ -21,6 +21,8 @@ There is a set up script that establishes the symlinks in your home directory. R
 * For Bash (needs some fixes)
         `_setupdotfiles.bsh`
 
+> NOTE: Some personal configuration of Matthew's will remain after setup. These dotfiles are intended for your inspiration, forking, and for you to tweak to your specific needs.
+
 # Contributions
 Contributions are always welcome in the form of pull requests with explanatory comments.
 
