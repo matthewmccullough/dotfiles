@@ -118,9 +118,6 @@ alias class.simpleprompt='export PS1=" $ "'
 #########################################
 # Utility Functions
 
-# Create a new git repo with one README commit and CD into it
-function git.nr() { mkdir $1; cd $1; git init; touch README; git add README; git commit -mFirst-commit;}
-
 # Restart Apache on Mac
 alias apacherestart="sudo /usr/sbin/apachectl restart"
 
