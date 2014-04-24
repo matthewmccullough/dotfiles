@@ -7,11 +7,11 @@ function work.ppap() {
 	open "https://github.com/presentationPatterns"
 	open "https://github.com/PresentationPatterns/presentationpatterns.github.com"
 
-	open "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book"
-	open "/Users/mccm06/Dropbox/PPAP"
-    iterm "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book" "PPAP-Book" "black"
-	iterm "/Users/mccm06/Dropbox/PPAP" "PPAP-Dropbox" "black"
-	iterm "/Users/mccm06/Dropbox/AI-Clients/Presentation-Patterns-Book/presentationpatterns.github.com" "PPAP-Site" "black"
+	open "~/Dropbox/AI-Clients/Presentation-Patterns-Book"
+	open "~/Dropbox/PPAP"
+    iterm "~/Dropbox/AI-Clients/Presentation-Patterns-Book" "PPAP-Book" "black"
+	iterm "~/Dropbox/PPAP" "PPAP-Dropbox" "black"
+	iterm "~/Dropbox/AI-Clients/Presentation-Patterns-Book/presentationpatterns.github.com" "PPAP-Site" "black"
 }
 
 function work.teachgit() {
@@ -22,8 +22,8 @@ function work.teachgit() {
 	open "https://github.com/training/free"
 	open "https://github.com/matthewmccullough/dotfiles"
 
-	open "/Users/mccm06/Documents/Temp/Scratch"
-    iterm "/Users/mccm06/Documents/Temp/Scratch" "Scratch" "black"
+	open "~/Documents/Temp/Scratch"
+    iterm "~/Documents/Temp/Scratch" "Scratch" "black"
 }
 
 
@@ -32,8 +32,8 @@ function work.gittraining() {
     open "https://github.com/github/training/issues"
     open "https://github.com/github/teach.github.com"
 
-    open "/Users/mccm06/Documents/Code/GitHub"
-    open "/Users/mccm06/Documents/Code/GitHub/training.github.com_git"
-    open "/Users/mccm06/Documents/Code/GitHub/GUTS_git"
-    open "/Users/mccm06/Documents/Code/GitHub/teach.github.com"
+    open "~/Documents/Code/GitHub"
+    open "~/Documents/Code/GitHub/training.github.com_git"
+    open "~/Documents/Code/GitHub/GUTS_git"
+    open "~/Documents/Code/GitHub/teach.github.com"
 }

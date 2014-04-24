@@ -29,7 +29,7 @@
 	#untracked = cyan
 
 [gui]
-	recentrepo = /Users/mccm06/Documents/Temp/Scratch/hello/hgw1
+	recentrepo = ~/Documents/Temp/Scratch/hello/hgw1
 
 [core]
 	excludesfile = ~/.gitignore
@@ -239,17 +239,11 @@
 [http]
 	# proxy=http://something
 
-[github]
-	# https://github.com/blog/180-local-github-config
-	user = matthewmccullough
-	#token = PLACEHOLDER
 [hub]
 	protocol = https
 [gist]
 	private = yes
 	browse = yes
-[ghi]
-	token = PLACEHOLDER
 #[credential]
 	# helper = cache --timeout=300
 
