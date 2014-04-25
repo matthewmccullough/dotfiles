@@ -21,7 +21,10 @@ shopt -s histappend
 shopt -s cmdhist
 
 # Load Matthew's Git bash prompt
-source ~/.dotfiles/bash_gitprompt
+# source ~/.dotfiles/bash_gitprompt
 
 # Load Brew's git bash completion
-# source /usr/local/Cellar/git/1.8.0.1/etc/bash_completion.d/git-completion.bash
+# source /opt/boxen/homebrew/Cellar/git/1.9.1/etc/bash_completion.d/git-completion.bash
+# source /opt/boxen/homebrew/Cellar/git/1.9.1/etc/bash_completion.d/git-prompt.sh
+# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+# GIT_PS1_SHOWDIRTYSTATE=true
