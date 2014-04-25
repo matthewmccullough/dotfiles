@@ -180,6 +180,7 @@
 	logfive = log --graph --pretty=oneline --abbrev-commit --decorate --all -5
 	noderelnotes = git log --graph --pretty=format:'%h%d %s (%an)'
 	configsimplelog = config format.pretty oneline
+	listignored = ls-files --others -i --exclude-standard
 
 
 [apply]
@@ -193,7 +194,7 @@
 	cmd = araxisgitdiff ONE $LOCAL THREE FOUR $REMOTE
 [diff]
 #	tool = araxis
-	tool = myaraxis
+	tool = Kaleidoscope
 #	renames = true
 
 [mergetool]
@@ -203,7 +204,7 @@
     cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
 [merge]
 #	tool = araxis
-	tool = p4merge
+	tool = Kaleidoscope
 
 [branch]
     # Automatically set up pull to be --rebase
@@ -249,3 +250,11 @@
 
 [push]
 	default = matching
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
