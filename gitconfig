@@ -1,6 +1,7 @@
 [user]
 	name = Matthew McCullough
 	email = matthew@github.com
+	username = matthewmccullough
 
 [color]
 # ui = true is a superset of all the more specific color options
@@ -255,5 +256,9 @@
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+
+[gh]
+protocol = https
