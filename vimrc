@@ -4,7 +4,12 @@
 execute pathogen#infect()
 
 " set our tabs to four spaces
-set ts=4
+set ts=2
+
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 " turn syntax highlighting on by default
 syntax on
