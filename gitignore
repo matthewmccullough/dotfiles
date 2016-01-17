@@ -1,6 +1,13 @@
-.DS_Store
+*.swp
+*.swo
 *~
+.ruby-version
+.rbenv-version
+*.sublime-project
+*.sublime-workspace
+thumbs.db
 .#*
-.gradle_targets
+.DS_Store
 .gradle
+.gradle_targets
 .gradletasknamecache
