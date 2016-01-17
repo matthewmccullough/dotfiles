@@ -262,3 +262,7 @@
 
 [gh]
 protocol = https
+#[github]
+#	user = matthewmccullough
+#[credential]
+#	helper = osxkeychain
