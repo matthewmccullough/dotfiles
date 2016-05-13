@@ -2,6 +2,7 @@
 	name = Matthew McCullough
 	email = matthew@github.com
 	username = matthewmccullough
+	signingkey = FC9C6E47
 
 [color]
 # ui = true is a superset of all the more specific color options
@@ -14,7 +15,7 @@
 	# diff = auto
 	# status = auto
 	# branch = auto
-	
+
 [color "branch"]
 	#current = yellow reverse
 	#local = yellow
@@ -131,7 +132,7 @@
 	nr = "!sh -c 'git init $0'"
 	echoparam1 = "!sh -c 'echo $0'"
 	#testshfunction = "!function gitme() { git init $1; cd $1; }; gitme"
-	
+
 	fixup = "!sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -"
 	squash = "!sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -"
 	ccfq = "!sh -c 'git add $1 && git commit -m\"Placeholder\"' -"
@@ -142,7 +143,7 @@
 	gwcl = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	rlog = log --color-words --stat -3
 	lm = log --stat -M
-	
+
 	# Legit
 	legitsync = !legit sync \"$@\"
 	legitswitch = !legit switch \"$@\"
@@ -152,10 +153,10 @@
 	legitharvest = !legit harvest \"$@\"
 	legitpublish = !legit publish \"$@\"
 	legitgraft = !legit graft \"$@\"
-	
+
 	#Searches
 	findjuniodeletes = log --author=Junio --diff-filter=D --since=2.years.ago
-	
+
 	#https://git.wiki.kernel.org/index.php?title=Aliases
 	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
@@ -181,7 +182,7 @@
 	noderelnotes = git log --graph --pretty=format:'%h%d %s (%an)'
 	configsimplelog = config format.pretty oneline
 	listignored = ls-files --others -i --exclude-standard
-
+  me = !git config --get user.name && git config --get user.email
 
 [apply]
 	whitespace = nowarn
@@ -234,7 +235,7 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-	
+
 [difftool "p4merge"]
 	cmd = \"/Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE\"
 [http]
@@ -266,6 +267,13 @@ protocol = https
 #	user = matthewmccullough
 #[credential]
 #	helper = osxkeychain
+
+[github]
+	user = matthewmccullough
+
+[credential]
+	helper = osxkeychain
+
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
