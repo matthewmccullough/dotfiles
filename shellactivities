@@ -1,5 +1,22 @@
 #!/bin/sh
 
+# Git Be
+# Will contact the GitHub API to retrieve name and email information about a user
+# and uses that data to change the local (repo-scoped) configuration for user.name and user.email
+#
+# Usage: gitbe githubteacher
+
+function gitbe {
+    echo "Looking up $1 on GitHub.com..."
+    data=$(curl -s https://api.github.com/users/$1)
+    name=$(echo $data | grep name\": | sed 's/  \"name\": \"\(.*\)\",/\1/')
+    email=$(echo $data | grep email\": | sed 's/  \"email\": \"\(.*\)\",/\1/')
+    git config --local user.name "$name"
+    git config --local user.email $email
+    echo "Your local configuration has been modified."
+    echo "You are now committing as: $name <$email>."
+}
+
 # Productivity Sessions
 function work.ppap() {
     open "http://presentationpatterns.com"
@@ -17,7 +34,7 @@ function work.ppap() {
 function work.teachgit() {
     open "https://github.com/githubtrainer/hellogitworld" -a "Firefox"
 	open "https://github.com/githubstudent" -a "Google Chrome"
-	
+
 	open "https://github.com/github/teach.github.com"
 	open "https://github.com/training/free"
 	open "https://github.com/matthewmccullough/dotfiles"
