@@ -8,15 +8,7 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/.dotfiles/scripts
 
 # Brew
-export PATH=/opt/boxen/homebrew/sbin:$PATH
-#export PATH=/opt/boxen/homebrew/bin:$PATH
-
-# MacPorts
-## Having MacPorts first instead of after $PATH causes a GitK error
-## http://stackoverflow.com/questions/2629292/starting-gitk-error
-export PATH=$PATH:/opt/local/bin
-export PATH=$PATH:/opt/local/sbin
-export MANPATH=$MANPATH:/opt/local/share/man
+export PATH="/usr/local/sbin:$PATH"
 
 # Dev frameworks
 #export PATH=$PATH:$ANT_HOME/bin
@@ -43,9 +35,5 @@ export PATH=~/.rbenv/bin:$PATH
 # Haskell
 export PATH=$PATH:~/.cabal/bin
 
-# Git Tools
-PATH=$PATH:/Applications/Dev/jgit
-
 # Node JS Packages (from Brew Install of Node and NPM)
 PATH=$PATH:/usr/local/share/npm/bin
-
