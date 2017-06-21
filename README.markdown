@@ -11,15 +11,15 @@ The contents of this repo have been partly invented from scratch, partly inspire
 This project contains submodules. It is suggested that you clone this into your home directory.
 
     cd ~
-    git clone --recurse-submodules https://github.com/matthewmccullough/dotfiles
+    git clone --recurse-submodules https://github.com/matthewmccullough/dotfiles .dotfiles
 
 # Setup
 There is a set up script that establishes the symlinks in your home directory. Run this once.
 
 * For ZShell
-        `_setupdotfiles.zsh`
+        ~/.dotfiles/_setupdotfiles.zsh
 * For Bash (needs some fixes)
-        `_setupdotfiles.bsh`
+        ~/.dotfiles/_setupdotfiles.bsh
 
 > NOTE: Some personal configuration of Matthew's will remain after setup. These dotfiles are intended for your inspiration, forking, and for you to tweak to your specific needs.
 
