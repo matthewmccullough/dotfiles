@@ -181,3 +181,6 @@ function screenshot.setpng() {
     defaults write com.apple.screencapture type png
 	killall SystemUIServer
 }
+
+## Show third party kernel extensions
+alias thirdpartykernelextensions='kextstat | grep -v apple'
