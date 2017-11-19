@@ -35,3 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Load rbenv ruby version selector
+# https://github.com/rbenv/rbenv#homebrew-on-macos
+eval "$(rbenv init -)"
