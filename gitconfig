@@ -1,6 +1,6 @@
 [user]
 	name = Matthew McCullough
-	email = matthew@github.com
+	email = matthew@mccullough.io
 	username = matthewmccullough
 	signingkey = FC9C6E47
 
@@ -275,6 +275,7 @@ protocol = https
 	helper = osxkeychain
 
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
