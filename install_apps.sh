@@ -31,33 +31,6 @@ test_for_xcode_installation()
 ## Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install App Store automation: https://github.com/mas-cli/mas
-brew install mas
-
-# App Store Apps
-appstoreapps=(
-	406056744 # Evernote
-	904280696 # Things 3
-	540348655 # Monosnap
-	443987910 # 1Password 6 
-	419330170 # Moom
-	540348655 # Monosnap
-	975937182 # Fantastical 2
-	1289197285 # MindNode 5
-	1090488118 # Gemini 2
-	1091189122 # Bear
-	803453959 # Slack
-	409203825 # Numbers
-	409201541 # Pages
-	409183694 # Keynote
-	)
-
-for appstoreapp in "${appstoreapps[@]}"
-do
-   mas install $appstoreapp
-done
-
-
 ## TODO: Find out how to automatedly install
 # Box desktop
 
