@@ -35,16 +35,20 @@ cask 'java'
 
 brew 'ack'
 brew 'autoconf'
+brew 'autojump'
 brew 'xz'
 brew 'cmake'
+brew 'dos2unix'
 brew 'libpng'
 brew 'freetype'
 brew 'gettext'
 brew 'pkg-config'
 brew 'libffi'
 brew 'glib'
+brew 'geoip'
 brew 'grc'
-# brew 'heroku-toolbelt'
+brew 'heroku-toolbelt'
+brew 'hh'
 brew 'hub'
 brew 'icu4c'
 brew 'libtool'
@@ -57,11 +61,13 @@ brew 'oniguruma'
 brew 'jq'
 brew 'launchdns'
 brew 'openssl'
+brew 'ncdu'
 brew 'libevent'
 brew 'libgpg-error'
 brew 'libgcrypt'
 brew 'readline'
 brew 'sqlite'
+brew 'tree'
 brew 'libgda'
 brew 'memcached'
 brew 'pcre'
@@ -70,19 +76,8 @@ brew 'node'
 brew 'ruby-build'
 brew 'rbenv'
 brew 'rbenv-default-gems'
-# brew 'rbenv-read line'
 brew 'ssh-copy-id'
+brew 'the_silver_searcher'
 brew 'wget'
-
-#	autojump
-#	the_silver_searcher
-#	geoip
-#	youtube-dl
-#	jq
-#	ncdu
-#	wget
-#	hh
-#	dos2unix
-#	tree
-#	ack
-#	z
+brew 'z'
+brew 'youtube-dl'

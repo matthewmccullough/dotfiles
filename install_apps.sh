@@ -1,12 +1,7 @@
 #!/bin/bash
 set -e # Failed commands will cause an immediate exit
 
-#######################################################
-# Install brew, install casks, install app store apps,
-# install Apple OS updates.
-#
 # Inspired by: https://gist.github.com/t-io/8255711
-#######################################################
 
 test_for_home_brew_installation()
 {
@@ -18,45 +13,48 @@ test_for_home_brew_installation()
     fi
 }
 
-# FYI: A list of casks can be found at
-# /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks
+## Use Brewfile in $CWD to install formulae and casks
+brew tap homebrew/bundle
+brew bundle
 
-brewcasks=(
-	adobe-creative-cloud
-	alfred
-	appcleaner
-	araxis-merge
-	atom
-	box-sync
-	carbon-copy-cloner
-	duet
-	dropbox
-	encryptme
-	github
-	google-chrome
-	iterm2
-	java
-	keepingyouawake
-	mailplane
-	microsoft-office
-	microsoft-teams
-	skype
-	sublime-text
-	textmate
-	visual-studio-code
-	vlc
-	vmware-fusion
-	whatsapp
-	zoomus
-	)
+## DEPRECATED: Now controlled by Brewfile
+# Find all casks at /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks
+# brewcasks=(
+#		alfred
+# 	)
+#
+# for brewcask in "${brewcasks[@]}"
+# do
+#    brew cask install $brewcask
+# done
 
-for brewcask in "${brewcasks[@]}"
-do
-   brew cask install $brewcask
-done
+test_for_xcode_installation()
+{
+    if hash xcode-select -v 2>/dev/null; then
+       echo "XCode is already installed. Continuing."
+    else 
+       # Install XCode
+       xcode-select --install
+    fi
+}
 
+## DEPRECATED: Now controlled by Brewfile
+# Homebrew formulae
+# brewformulae=(
+# 	dos2unix
+# 	ack
+# 	z
+# 	)
+#
+# for brewformula in "${brewformulae[@]}"
+# do
+#    brew install $brewformula
+# done
 
-# App Store automation: https://github.com/mas-cli/mas
+## Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install App Store automation: https://github.com/mas-cli/mas
 brew install mas
 
 # App Store Apps
@@ -82,5 +80,9 @@ do
    mas install $appstoreapp
 done
 
-# Maintenance
+
+## TODO: Find out how to automatedly install
+# Box desktop
+
+## Maintenance
 softwareupdate -i -a # Install all software updates
