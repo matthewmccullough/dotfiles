@@ -14,6 +14,7 @@ test_for_home_brew_installation()
 }
 
 ## Use Brewfile in $CWD to install formulae and casks
+## Info at https://github.com/Homebrew/homebrew-bundle
 brew tap homebrew/bundle
 brew bundle
 
