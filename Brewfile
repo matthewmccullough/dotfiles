@@ -1,6 +1,6 @@
 tap 'caskroom/cask'
 tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
-tap 'homebrew/bundle'
+tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
 tap 'homebrew/dev-tools'
 tap 'homebrew/services'
 

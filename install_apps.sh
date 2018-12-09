@@ -5,12 +5,14 @@ set -e # Failed commands will cause an immediate exit
 
 test_for_home_brew_installation()
 {
-    if hash brew 2>/dev/null; then
-       echo "Homebrew 'brew' is already installed. Continuing."
-    else 
-       # Install brew
-       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    fi
+	which -s brew
+	if [[ $? != 0 ]] ; then
+		echo "Installing Homebrew."
+		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	else
+		echo "Homebrew 'brew' is already installed. Now updating."
+		brew update
+	fi
 }
 
 ## Use Brewfile in $CWD to install formulae and casks
