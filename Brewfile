@@ -78,7 +78,7 @@ brew 'readline'
 brew 'ruby-build'
 brew 'sqlite'
 brew 'ssh-copy-id'
-brew 'the_silver_searcher'
+brew 'the_silver_searcher' # ag texttofind filestosearch
 brew 'tree'
 brew 'wget'
 brew 'xz'

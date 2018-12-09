@@ -18,17 +18,6 @@ test_for_home_brew_installation()
 brew tap homebrew/bundle
 brew bundle
 
-## DEPRECATED: Now controlled by Brewfile
-# Find all casks at /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks
-# brewcasks=(
-#		alfred
-# 	)
-#
-# for brewcask in "${brewcasks[@]}"
-# do
-#    brew cask install $brewcask
-# done
-
 test_for_xcode_installation()
 {
     if hash xcode-select -v 2>/dev/null; then
@@ -38,19 +27,6 @@ test_for_xcode_installation()
        xcode-select --install
     fi
 }
-
-## DEPRECATED: Now controlled by Brewfile
-# Homebrew formulae
-# brewformulae=(
-# 	dos2unix
-# 	ack
-# 	z
-# 	)
-#
-# for brewformula in "${brewformulae[@]}"
-# do
-#    brew install $brewformula
-# done
 
 ## Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
