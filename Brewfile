@@ -1,8 +1,7 @@
-tap 'caskroom/cask'
+tap 'caskroom/cask' # https://github.com/Homebrew/homebrew-cask
 tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
 tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
-tap 'homebrew/dev-tools'
-tap 'homebrew/services'
+tap 'homebrew/services' # https://github.com/Homebrew/homebrew-services
 
 cask 'adobe-creative-cloud'
 cask 'alfred'
