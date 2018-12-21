@@ -77,7 +77,9 @@ brew 'readline'
 brew 'ruby-build'
 brew 'sqlite'
 brew 'ssh-copy-id'
-brew 'the_silver_searcher' # ag texttofind filestosearch
+brew 'the_silver_searcher' # A code-searching tool similar to ack, but faster.
+    # http://geoff.greer.fm/ag/
+    # Example: ag texttofind filestosearch
 brew 'tree'
 brew 'wget'
 brew 'xz'
