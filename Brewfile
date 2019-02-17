@@ -2,6 +2,7 @@ tap 'caskroom/cask' # https://github.com/Homebrew/homebrew-cask
 tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
 tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
 tap 'homebrew/services' # https://github.com/Homebrew/homebrew-services
+tap 'cjbassi/gotop' # https://github.com/cjbassi/gotop
 
 cask 'adobe-creative-cloud'
 cask 'alfred'
@@ -42,6 +43,8 @@ brew 'geoip'
 brew 'gettext'
 brew 'glib'
 brew 'go'
+brew 'gotop'
+brew 'ghi'
 brew 'gradle'
 brew 'grc'
 brew 'hh'
