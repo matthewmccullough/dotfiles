@@ -184,3 +184,6 @@ function screenshot.setpng() {
 
 ## Show third party kernel extensions
 alias thirdpartykernelextensions='kextstat | grep -v apple'
+
+## DHCP renew
+alias ipreleaserenew="sudo ipconfig set en0 BOOTP && sudo ipconfig set en0 DHCP"
