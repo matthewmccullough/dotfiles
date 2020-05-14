@@ -38,3 +38,7 @@ export JAVA_HOME=/Library/Java/Home
 
 GPG_TTY=$(tty)
 export GPG_TTY
+
+export GOPATH=$HOME/go-workspace
+
+export GITHUB_TOKEN=`security find-internet-password -a matthewmccullough -s github.com -l 'ghi token' -w`
