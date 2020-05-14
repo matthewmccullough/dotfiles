@@ -3,6 +3,7 @@ tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
 tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
 tap 'homebrew/services' # https://github.com/Homebrew/homebrew-services
 tap 'cjbassi/gotop' # https://github.com/cjbassi/gotop
+tap `octo-cli/octo`
 
 cask 'adobe-creative-cloud'
 cask 'alfred'
@@ -71,6 +72,7 @@ brew 'ncdu'
 brew 'nginx'
 brew 'node'
 brew 'nodenv'
+brew 'octo'
 brew 'oniguruma'
 brew 'openssl'
 brew 'pcre'
