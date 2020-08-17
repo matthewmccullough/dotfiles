@@ -29,12 +29,9 @@ export CASE_SENSITIVE="true"
 # export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
-plugins=(git battery brew osx gradle ant compleat dirpersist gem ssh-agent cloudapp ruby textmate sublime)
+plugins=(git battery brew osx gradle ant compleat dirpersist gem ssh-agent ruby textmate sublime)
 
 source $ZSH/oh-my-zsh.sh
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 # Load rbenv ruby version selector
 # https://github.com/rbenv/rbenv#homebrew-on-macos
