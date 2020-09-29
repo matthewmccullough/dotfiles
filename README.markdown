@@ -23,6 +23,10 @@ There is a set up script that establishes the symlinks in your home directory. R
 
 > NOTE: Some personal configuration of Matthew's will remain after setup. These dotfiles are intended for your inspiration, forking, and for you to tweak to your specific needs.
 
+# Non-automated, non-captured config
+
+Reminder-to-self: Some additional personalization lives in the `~/.config/` directory.  Specifically, the `~/.config/gh/config.yml` file for [`gh`](https://cli.github.com). It is not yet in scope for capture or copy, but some uers have [shared their configuration in a Gist](https://gist.github.com/vilmibm/a1b9a405ac0d5153c614c9c646e37d13).
+
 # Contributions
 Contributions are always welcome in the form of pull requests with explanatory comments.
 
