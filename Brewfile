@@ -1,6 +1,6 @@
 tap "cjbassi/gotop" # https://github.com/cjbassi/gotop
 tap "homebrew/bundle" # https://github.com/Homebrew/homebrew-bundle
-tap "caskroom/cask" # https://github.com/Homebrew/homebrew-cask
+tap "homebrew/cask" # https://github.com/Homebrew/homebrew-cask
 tap "homebrew/core"
 tap "homebrew/services" # https://github.com/Homebrew/homebrew-services
 tap "octo-cli/octo"
@@ -123,16 +123,13 @@ cask "xquartz"
 
 # Install App Store automation: https://github.com/mas-cli/mas
 mas "Evernote", id: 406056744
-mas "Things 3", id: 904280696
-mas "Monosnap", id: 540348655
-mas "1Password 6", id: 443987910
+# mas "Things 3", id: 904280696
+# mas "1Password 6", id: 443987910
 mas "Moom", id: 419330170
-mas "Monosnap", id: 540348655
-mas "Fantastical 2", id: 975937182
 mas "MindNode 5", id: 1289197285
-mas "Gemini 2", id: 1090488118
-mas "Bear", id: 1091189122
+# mas "Gemini 2", id: 1090488118
+# mas "Bear", id: 1091189122
 mas "Slack", id: 803453959
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Keynote", id: 409183694
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+# mas "Keynote", id: 409183694
