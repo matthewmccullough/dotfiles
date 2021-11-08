@@ -8,7 +8,6 @@ tap `octo-cli/octo`
 cask 'adobe-creative-cloud'
 cask 'alfred'
 cask 'appcleaner'
-cask 'araxis-merge'
 cask 'atom'
 cask 'box-sync'
 cask 'carbon-copy-cloner'
@@ -38,6 +37,7 @@ cask 'zoomus'
 brew 'ack'
 brew 'autoconf'
 brew 'autojump'
+brew 'cowsay'
 brew 'cmake'
 brew 'dos2unix'
 brew 'freetype'
@@ -97,10 +97,9 @@ brew 'z'
 mas "Evernote", id: 406056744
 mas "Things 3", id: 904280696
 mas "Monosnap", id: 540348655
-mas "1Password 6", id: 443987910
+mas "1Password 7", id: 443987910
 mas "Moom", id: 419330170
 mas "Monosnap", id: 540348655
-mas "Fantastical 2", id: 975937182
 mas "MindNode 5", id: 1289197285
 mas "Gemini 2", id: 1090488118
 mas "Bear", id: 1091189122
