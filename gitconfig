@@ -40,6 +40,8 @@
 	editor = vim
 
 [alias]
+	ad = difftool --tool=araxis --dir-diff
+	ads = difftool --tool=araxis --dir-diff --staged
 	br = branch -a
 	s = status -u -s
 	cl = log --stat -C -2
@@ -191,11 +193,11 @@
 
 [difftool]
 	prompt = false
+	tool = araxis
 [difftool "myaraxis"]
 	cmd = araxisgitdiff ONE $LOCAL THREE FOUR $REMOTE
 [diff]
-#	tool = araxis
-	tool = Kaleidoscope
+	tool = araxis
 #	renames = true
 
 [mergetool]
@@ -204,8 +206,7 @@
 [mergetool "myaraxis"]
     cmd = araxisgitmerge $PWD/$REMOTE $PWD/$BASE $PWD/$LOCAL $PWD/$MERGED
 [merge]
-#	tool = araxis
-	tool = Kaleidoscope
+	tool = araxis
 
 [branch]
     # Automatically set up pull to be --rebase
