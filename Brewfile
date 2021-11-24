@@ -1,8 +1,8 @@
 tap 'caskroom/cask' # https://github.com/Homebrew/homebrew-cask
+tap 'cjbassi/gotop' # https://github.com/cjbassi/gotop
 tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
 tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
 tap 'homebrew/services' # https://github.com/Homebrew/homebrew-services
-tap 'cjbassi/gotop' # https://github.com/cjbassi/gotop
 tap `octo-cli/octo`
 
 cask 'adobe-creative-cloud'
@@ -20,7 +20,6 @@ cask 'github'
 cask 'google-chrome'
 cask 'iterm2'
 cask 'java'
-cask 'java'
 cask 'keepingyouawake'
 cask 'mailplane'
 cask 'microsoft-office'
@@ -33,8 +32,8 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'vmware-fusion'
 cask 'whatsapp'
-cask "xquartz"
 cask 'zoomus'
+cask "xquartz"
 
 brew "ack"
 brew "asciidoc"
@@ -150,16 +149,15 @@ brew "zlib"
 brew "zsh"
 
 # Install App Store automation: https://github.com/mas-cli/mas
-mas "Evernote", id: 406056744
-mas "Things 3", id: 904280696
-mas "Monosnap", id: 540348655
 mas "1Password 7", id: 443987910
-mas "Moom", id: 419330170
-mas "Monosnap", id: 540348655
-mas "MindNode 5", id: 1289197285
-mas "Gemini 2", id: 1090488118
 mas "Bear", id: 1091189122
-mas "Slack", id: 803453959
+mas "Evernote", id: 406056744
+mas "Gemini 2", id: 1090488118
+mas "Keynote", id: 409183694
+mas "MindNode 5", id: 1289197285
+mas "Monosnap", id: 540348655
+mas "Moom", id: 419330170
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Keynote", id: 409183694
+mas "Slack", id: 803453959
+mas "Things 3", id: 904280696
