@@ -9,6 +9,9 @@ export PATH=$PATH:.
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.dotfiles/scripts
 
+# Araxis
+export PATH=/Applications/Araxis\ Merge.app/Contents/Utilities:$PATH
+
 # Brew
 export PATH="/usr/local/sbin:$PATH"
 
@@ -38,4 +41,4 @@ export PATH=~/.rbenv/bin:$PATH
 export PATH=$PATH:~/.cabal/bin
 
 # Node JS Packages (from Brew Install of Node and NPM)
-PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:/usr/local/share/npm/bin
