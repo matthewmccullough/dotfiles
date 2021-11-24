@@ -1,10 +1,40 @@
-tap "cjbassi/gotop" # https://github.com/cjbassi/gotop
-tap "homebrew/bundle" # https://github.com/Homebrew/homebrew-bundle
-tap "homebrew/cask" # https://github.com/Homebrew/homebrew-cask
-tap "homebrew/core"
-tap "homebrew/services" # https://github.com/Homebrew/homebrew-services
-tap "octo-cli/octo"
-tap "homebrew/services"
+tap 'caskroom/cask' # https://github.com/Homebrew/homebrew-cask
+tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
+tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
+tap 'homebrew/services' # https://github.com/Homebrew/homebrew-services
+tap 'cjbassi/gotop' # https://github.com/cjbassi/gotop
+tap `octo-cli/octo`
+
+cask 'adobe-creative-cloud'
+cask 'alfred'
+cask 'appcleaner'
+cask 'araxis-merge'
+cask 'atom'
+cask 'box-sync'
+cask 'carbon-copy-cloner'
+cask 'dropbox'
+cask 'duet'
+cask 'encryptme'
+cask 'gawk'
+cask 'github'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'java'
+cask 'java'
+cask 'keepingyouawake'
+cask 'mailplane'
+cask 'microsoft-office'
+cask 'microsoft-teams'
+cask 'noun-project'
+cask 'skype'
+cask 'sublime-text'
+cask 'textmate'
+cask 'visual-studio-code'
+cask 'vlc'
+cask 'vmware-fusion'
+cask 'whatsapp'
+cask "xquartz"
+cask 'zoomus'
 
 brew "ack"
 brew "asciidoc"
@@ -21,19 +51,19 @@ brew "findutils"
 brew "fpp"
 brew "freetype"
 brew "geoip"
+brew "gettext"
+brew "gh"
+brew "ghi"
 brew "gist"
 brew "git-extras"
 brew "git-lfs"
 brew "git-sh"
 brew "git"
-brew "gettext"
+brew "glib"
 brew "gnu-tar"
 brew "gnupg"
-brew "glib"
 brew "go"
 brew "gotop"
-brew "gh"
-brew "ghi"
 brew "gradle"
 brew "graphviz"
 brew "grc"
@@ -53,14 +83,14 @@ brew "libevent"
 brew "libffi"
 brew "libgcrypt"
 brew "libgda"
-brew "libmpc"
-brew "libunistring"
-brew "libxml2"
-brew "libxmlsec1"
 brew "libgpg-error"
+brew "libmpc"
 brew "libpng"
 brew "libtiff"
 brew "libtool"
+brew "libunistring"
+brew "libxml2"
+brew "libxmlsec1"
 brew "lighttpd"
 brew "macvim"
 brew "maven"
@@ -70,8 +100,8 @@ brew "memtester"
 brew "mercurial"
 brew "multimarkdown"
 brew "mysql"
-brew "neon"
 brew "ncdu"
+brew "neon"
 brew "nginx"
 brew "nmap"
 brew "nnn"
@@ -80,15 +110,15 @@ brew "nodenv"
 brew "octo"
 brew "oniguruma"
 brew "openjdk"
-brew "openssl@1.1"
+brew "openssl"
 brew "ossp-uuid"
 brew "pcre"
-brew "pkg-config"
 brew "pidof"
 brew "pixman"
+brew "pkg-config"
 brew "postgresql"
 brew "pth"
-brew "python@3.9"
+brew "python"
 brew "qpdf"
 brew "rarian"
 brew "rbenv-default-gems"
@@ -98,10 +128,10 @@ brew "ruby-build"
 brew "ruby-install"
 brew "ruby"
 brew "scons"
-brew "sqlite"
 brew "shared-mime-info"
 brew "speedtest-cli"
 brew "sphinx-doc"
+brew "sqlite"
 brew "ssh-copy-id"
 brew "subversion"
 brew "switchaudio-osx"
@@ -112,24 +142,24 @@ brew "tmux"
 brew "tree"
 brew "watch"
 brew "wget"
-brew "yasm"
 brew "xz"
+brew "yasm"
 brew "youtube-dl"
 brew "z"
 brew "zlib"
 brew "zsh"
 
-cask "xquartz"
-
 # Install App Store automation: https://github.com/mas-cli/mas
 mas "Evernote", id: 406056744
-# mas "Things 3", id: 904280696
-# mas "1Password 6", id: 443987910
+mas "Things 3", id: 904280696
+mas "Monosnap", id: 540348655
+mas "1Password 7", id: 443987910
 mas "Moom", id: 419330170
+mas "Monosnap", id: 540348655
 mas "MindNode 5", id: 1289197285
-# mas "Gemini 2", id: 1090488118
-# mas "Bear", id: 1091189122
+mas "Gemini 2", id: 1090488118
+mas "Bear", id: 1091189122
 mas "Slack", id: 803453959
-# mas "Numbers", id: 409203825
-# mas "Pages", id: 409201541
-# mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Keynote", id: 409183694
