@@ -1,51 +1,46 @@
-tap 'caskroom/cask' # https://github.com/Homebrew/homebrew-cask
 tap 'cjbassi/gotop' # https://github.com/cjbassi/gotop
 tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
 tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
 tap 'homebrew/services' # https://github.com/Homebrew/homebrew-services
-tap `octo-cli/octo`
 
 cask 'adobe-creative-cloud'
 cask 'alfred'
 cask 'appcleaner'
-cask 'araxis-merge'
-cask 'atom'
-cask 'box-sync'
+#cask 'araxis-merge'
 cask 'carbon-copy-cloner'
-cask 'dropbox'
-cask 'duet'
+#cask 'dropbox'
 cask 'encryptme'
-cask 'gawk'
+#cask 'gawk'
 cask 'github'
 cask 'google-chrome'
 cask 'iterm2'
 cask 'java'
 cask 'keepingyouawake'
-cask 'mailplane'
+#cask 'mailplane'
 cask 'microsoft-office'
 cask 'microsoft-teams'
-cask 'noun-project'
+#cask 'noun-project'
 cask 'skype'
-cask 'sublime-text'
-cask 'textmate'
+#cask 'sublime-text'
+#cask 'textmate'
 cask 'visual-studio-code'
 cask 'vlc'
-cask 'vmware-fusion'
-cask 'whatsapp'
-cask 'zoomus'
+#cask 'vmware-fusion'
+#cask 'whatsapp'
+cask 'zoom'
 cask "xquartz"
 
 brew "ack"
-brew "asciidoc"
+#brew "asciidoc"
 brew "autoconf"
 brew "autojump"
 brew "automake"
-brew "chruby"
+#brew "chruby"
 brew "cjbassi/gotop/gotop"
 brew "cmake"
 brew "curl"
 brew "dos2unix"
-brew "ffmpeg"
+#brew "ffmpeg"
 brew "findutils"
 brew "fpp"
 brew "freetype"
@@ -106,7 +101,6 @@ brew "nmap"
 brew "nnn"
 brew "node"
 brew "nodenv"
-brew "octo"
 brew "oniguruma"
 brew "openjdk"
 brew "openssl"
