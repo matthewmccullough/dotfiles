@@ -282,3 +282,5 @@ protocol = https
 	process = git-lfs filter-process
 [ghi]
 	token = !security find-internet-password -a matthewmccullough -s github.com -l 'ghi token' -w
+[pull]
+	rebase = true
