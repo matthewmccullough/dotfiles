@@ -3,8 +3,8 @@ tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
 tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
 tap 'homebrew/services' # https://github.com/Homebrew/homebrew-services
 
-cask 'adobe-creative-cloud'
-cask 'alfred'
+#cask 'adobe-creative-cloud'
+#cask 'alfred'
 cask 'appcleaner'
 #cask 'araxis-merge'
 cask 'carbon-copy-cloner'
@@ -17,8 +17,8 @@ cask 'iterm2'
 cask 'java'
 cask 'keepingyouawake'
 #cask 'mailplane'
-cask 'microsoft-office'
-cask 'microsoft-teams'
+#cask 'microsoft-office'
+#cask 'microsoft-teams'
 #cask 'noun-project'
 cask 'skype'
 #cask 'sublime-text'
