@@ -14,7 +14,7 @@ cask 'encryptme'
 cask 'github'
 cask 'google-chrome'
 cask 'iterm2'
-cask 'java'
+#cask 'java'
 cask 'keepingyouawake'
 #cask 'mailplane'
 #cask 'microsoft-office'
@@ -61,7 +61,7 @@ brew "gradle"
 brew "graphviz"
 brew "grc"
 brew "groovy"
-brew "hh"
+brew "hstr"
 brew "hub"
 brew "icu4c"
 brew "imagemagick"
