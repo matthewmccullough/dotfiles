@@ -19,4 +19,4 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 ##############################################################################
 source ~/.dotfiles/z-rupa/z.sh
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/usr/local/bin/brew shellenv)"
