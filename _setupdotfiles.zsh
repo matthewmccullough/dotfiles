@@ -67,6 +67,6 @@ symlinkifne .zlogout
 symlinkifne .zprofile
 symlinkifne .zshenv
 symlinkifne .zshrc
-# symlinkifne .vim
+symlinkifne .vim
 
 popd
