@@ -3,10 +3,9 @@ tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
 tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
 tap 'homebrew/services' # https://github.com/Homebrew/homebrew-services
 
-#cask 'adobe-creative-cloud'
-#cask 'alfred'
+cask 'alfred'
 cask 'appcleaner'
-#cask 'araxis-merge'
+cask 'araxis-merge'
 cask 'carbon-copy-cloner'
 #cask 'dropbox'
 cask 'encryptme'
@@ -16,10 +15,9 @@ cask 'google-chrome'
 cask 'iterm2'
 #cask 'java'
 cask 'keepingyouawake'
-#cask 'mailplane'
 #cask 'microsoft-office'
 #cask 'microsoft-teams'
-#cask 'noun-project'
+cask 'noun-project'
 cask 'skype'
 #cask 'sublime-text'
 #cask 'textmate'
@@ -144,13 +142,21 @@ brew "zsh"
 # Install App Store automation: https://github.com/mas-cli/mas
 mas "1Password 7", id: 443987910
 mas "Bear", id: 1091189122
+mas "Boop", id: 1518425043
 mas "Evernote", id: 406056744
+mas "Final Cut Pro X", id: 424389933
 mas "Gemini 2", id: 1090488118
+mas "Gifski", id: 1351639930
+mas "Hex Fiend", id: 1342896380
 mas "Keynote", id: 409183694
+mas "Marked 2", id: 890031187
+mas "Meeting Bar", id: 1532419400
 mas "MindNode 5", id: 1289197285
 mas "Monosnap", id: 540348655
 mas "Moom", id: 419330170
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Pixelmator Pro", id: 1289583905
 mas "Slack", id: 803453959
+mas "Text Sniper", id: 1528890965
 mas "Things 3", id: 904280696
