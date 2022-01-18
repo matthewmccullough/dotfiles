@@ -3,6 +3,7 @@ tap 'github/bootstrap' # https://github.com/github/homebrew-bootstrap
 tap 'homebrew/bundle' # https://github.com/Homebrew/homebrew-bundle
 tap 'homebrew/services' # https://github.com/Homebrew/homebrew-services
 
+cask 'adobe-creative-cloud'
 cask 'alfred'
 cask 'appcleaner'
 cask 'araxis-merge'
@@ -12,12 +13,14 @@ cask 'encryptme'
 #cask 'gawk'
 cask 'github'
 cask 'google-chrome'
+cask 'google-drive'
 cask 'iterm2'
 #cask 'java'
 cask 'keepingyouawake'
 #cask 'microsoft-office'
 #cask 'microsoft-teams'
 cask 'noun-project'
+cask 'path-finder'
 cask 'skype'
 #cask 'sublime-text'
 #cask 'textmate'
