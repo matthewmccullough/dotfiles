@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/matthewmccullough/.dotfiles/scripts remote -v)",
+      "Bash(git -C /Users/matthewmccullough/.dotfiles/scripts config --list)",
+      "Bash(ssh:*)",
+      "Bash(git -C /Users/matthewmccullough/.dotfiles/scripts remote set-url origin git@github.com:matthewmccullough/scripts.git)",
+      "Bash(ls:*)",
+      "Bash(ssh-add:*)",
+      "Bash(gh ssh-key list:*)"
+    ]
+  }
+}
