@@ -18,7 +18,8 @@ export MYDEVAPPS=/Applications/Dev
 #########################################################################
 # Tool paths
 #########################################################################
-export JAVA_HOME=/Library/Java/Home
+export JAVA_HOME=$(/usr/libexec/java_home);
+#export JAVA_HOME=/Library/Java/Home
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 #export APPENGINE_HOME=/Applications/Dev/appengine-java-sdk
 #export CLOJURE_HOME=/Applications/Dev/clojure

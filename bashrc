@@ -1,8 +1,10 @@
 #!/bin/bash
 
-########################################################################
-# Bash non-interactive session setup
-########################################################################
+# Interactive Shell Setup
 
-# Bash non-interactive shell will load the same functions as the interactive shell
-source ~/.bash_profile
+# Load common configuration
+[[ -f ~/.profile ]] && source ~/.profile
+
+# History settings
+shopt -s histappend
+shopt -s cmdhist

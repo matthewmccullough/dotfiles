@@ -42,3 +42,9 @@ export PATH=$PATH:~/.cabal/bin
 
 # Node JS Packages (from Brew Install of Node and NPM)
 export PATH=$PATH:/usr/local/share/npm/bin
+
+# Python
+export PATH="/opt/homebrew/opt/python@3.14/libexec/bin:$PATH"
+
+# Antigravity
+export PATH="/Users/matthewmccullough/.antigravity/antigravity/bin:$PATH"
