@@ -7,7 +7,13 @@
       "Bash(git -C /Users/matthewmccullough/.dotfiles/scripts remote set-url origin git@github.com:matthewmccullough/scripts.git)",
       "Bash(ls:*)",
       "Bash(ssh-add:*)",
-      "Bash(gh ssh-key list:*)"
+      "Bash(gh ssh-key list:*)",
+      "Bash(git push:*)",
+      "Bash(code:*)",
+      "Bash(git -C /Users/matthewmccullough/.dotfiles status)",
+      "Bash(git -C /Users/matthewmccullough/.dotfiles diff .agents/settings.local.json)",
+      "Bash(git -C /Users/matthewmccullough/.dotfiles add .agents/settings.local.json)",
+      "Bash(git -C /Users/matthewmccullough/.dotfiles commit -m \"$\\(cat <<''EOF''\nUpdate local agent permission allowlist\nEOF\n\\)\")"
     ]
   }
 }
