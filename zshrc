@@ -1,3 +1,5 @@
+[[ -f ~/.profile ]] && source ~/.profile
+
 ##############################################################################
 # oh-my-zsh setup
 ##############################################################################
@@ -29,10 +31,14 @@ export CASE_SENSITIVE="true"
 # export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
-plugins=(git battery brew osx gradle ant compleat dirpersist gem ssh-agent ruby textmate sublime)
+plugins=(git battery brew osx gradle ant compleat dirpersist gem ruby textmate sublime)
 
 source $ZSH/oh-my-zsh.sh
 
 # Load rbenv ruby version selector
 # https://github.com/rbenv/rbenv#homebrew-on-macos
-eval "$(rbenv init -)"
+
+if command -v trash >/dev/null 2>&1; then
+  alias rm='trash'
+  alias rrm='/bin/rm'
+fi

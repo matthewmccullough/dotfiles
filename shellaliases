@@ -182,6 +182,9 @@ function screenshot.setpng() {
 	killall SystemUIServer
 }
 
+## List Intel (non-ARM) apps
+alias list-intel-apps='system_profiler SPApplicationsDataType | grep -B 20 "Kind: Intel"'
+
 ## Show third party kernel extensions
 alias thirdpartykernelextensions='kextstat | grep -v apple'
 

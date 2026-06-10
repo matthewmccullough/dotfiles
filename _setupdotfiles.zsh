@@ -50,7 +50,6 @@ pushd ~
 symlinkifne .bash_profile
 symlinkifne .bashrc
 symlinkifne .Brewfile
-symlinkifne .conf
 symlinkifne .gemrc
 symlinkifne .gitconfig
 symlinkifne .gitignore
